@@ -1,0 +1,20 @@
+.btn-color{
+    background-color: #0e1c36;
+    color: #fff;
+    
+  }
+  
+  .cardbody-color{
+    background-color: #ebf2fa;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+
+
+.form-width {
+  min-width: 500px; 
+  width: 100%; 
+  margin: auto; 
+}

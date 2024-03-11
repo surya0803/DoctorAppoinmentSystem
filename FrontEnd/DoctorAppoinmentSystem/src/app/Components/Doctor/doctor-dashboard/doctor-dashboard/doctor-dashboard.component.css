@@ -1,0 +1,14 @@
+.custom-card-style {
+    border: none;
+  }
+
+  #container{
+    margin-top: 10px;
+  }
+  #dashboard-header{
+    font-size: x-large; 
+    font: weight 450;
+  }
+  .dashboard-cards{
+    max-width: 18rem;
+  }

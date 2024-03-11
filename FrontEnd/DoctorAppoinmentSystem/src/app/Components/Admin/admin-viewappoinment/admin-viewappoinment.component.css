@@ -1,0 +1,22 @@
+.status-circle {
+    display: inline-block;
+    width: 20px; /* Adjust the size of the circle */
+    height: 20px; /* Adjust the size of the circle */
+    border-radius: 50%;
+  }
+
+#container{
+  margin-top: 10px;
+}
+
+#container-filterAppoinment{
+  padding: 10px 20px 10px 20px;
+}
+
+#container-table-1{
+  margin-top: 10px;
+}
+
+#container-table-2{
+  padding-top: 10px;
+}

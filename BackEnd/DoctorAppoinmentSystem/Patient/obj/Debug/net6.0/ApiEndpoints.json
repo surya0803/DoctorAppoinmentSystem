@@ -1,0 +1,392 @@
+[
+  {
+    "ContainingType": "Patient.Controllers.AdminController",
+    "Method": "PostDoctor",
+    "RelativePath": "api/Admin/AddNewDoctor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorModel",
+        "Type": "Patient.Model.DoctorModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.AdminController",
+    "Method": "GetAdminLogin",
+    "RelativePath": "api/Admin/AdminLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.AdminController",
+    "Method": "GetAllAppoinment",
+    "RelativePath": "api/Admin/GetAllAppoinmentDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.AdminController",
+    "Method": "GetAllDoctor",
+    "RelativePath": "api/Admin/GetAllDoctorDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.AdminController",
+    "Method": "GetAllPatient",
+    "RelativePath": "api/Admin/GetAllPatientDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.AdminController",
+    "Method": "GetPatientByUserName",
+    "RelativePath": "api/Admin/GetPatientByUserName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.AdminController",
+    "Method": "GetUserName",
+    "RelativePath": "api/Admin/GetUserName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.AdminController",
+    "Method": "PutPatient",
+    "RelativePath": "api/Admin/UpdatePatientDetails",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientModel",
+        "Type": "Patient.Model.PatientModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "GetDoctorLogin",
+    "RelativePath": "api/Doctor/DoctorLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "GetAllAppoinment",
+    "RelativePath": "api/Doctor/GetAppoinmentStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "GetDoctorByUserName",
+    "RelativePath": "api/Doctor/GetDoctorByUserName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "Actionresult",
+    "RelativePath": "api/Doctor/HistoryOfAppoinment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "UpdateAppoinmentStatus",
+    "RelativePath": "api/Doctor/PutAppoinmentStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "actionResult",
+    "RelativePath": "api/Doctor/TodayAppoinment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "ActionResult",
+    "RelativePath": "api/Doctor/UpComingAppoinment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "actionResult",
+    "RelativePath": "api/Doctor/UpdateDoctorAvailability",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "selectAppoinmentModel",
+        "Type": "Patient.Model.SelectAppoinmentModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.DoctorController",
+    "Method": "actionResult",
+    "RelativePath": "api/Doctor/UpdateDoctorDetails",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorModel",
+        "Type": "Patient.Model.DoctorModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.PatientController",
+    "Method": "PostAppoiment",
+    "RelativePath": "api/Patient/BookAppoinment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appoinmentModel",
+        "Type": "Patient.Model.AppoinmentModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.PatientController",
+    "Method": "GetAllDoctor",
+    "RelativePath": "api/Patient/GetAllDoctorSpecialization",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.PatientController",
+    "Method": "GetAllAppoinment",
+    "RelativePath": "api/Patient/GetAppoinmentStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.PatientController",
+    "Method": "GetTimeSlot",
+    "RelativePath": "api/Patient/GetTimeSlot",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "DoctorId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.PatientController",
+    "Method": "GetAdminLogin",
+    "RelativePath": "api/Patient/PatientLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.PatientController",
+    "Method": "PostPatient",
+    "RelativePath": "api/Patient/RegisterPatient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientModel",
+        "Type": "Patient.Model.PatientModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Patient.Controllers.PatientController",
+    "Method": "PutPatient",
+    "RelativePath": "api/Patient/UpdatePatientDetails",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientModel",
+        "Type": "Patient.Model.PatientModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,128 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card my-5">
+        <form [formGroup]="adddoctorForm" (ngSubmit)="onSubmit()" class="card-body cardbody-color p-lg-5">
+          <div class="mb-3">
+            <label for="InputUserName">Username</label>
+            <input type="text" class="form-control" id="InputUserName" placeholder="Enter Username" name="userName"
+              formControlName="userName" (input)="checkUserNameExists()">
+            <div *ngIf="adddoctorForm.get('userName')?.hasError('required') && adddoctorForm.get('userName')?.touched">
+              <small class="text-danger">Username is required.</small>
+            </div>
+            <div *ngIf="adddoctorForm.get('userName')?.hasError('userNameExists')">
+              <small class="text-danger">Username is not available.</small>
+            </div>            
+          </div>
+          <div class="mb-3">
+            <label for="InputPassword">Password</label>
+            <input type="password" class="form-control" id="InputPassword" placeholder="Password" name="password"
+              formControlName="password">
+            <div *ngIf="adddoctorForm.get('password')?.hasError('required') && adddoctorForm.get('password')?.touched">
+              <small class="text-danger">Password is required.</small>
+            </div>
+            <div
+              *ngIf="adddoctorForm.get('password')?.hasError('invalidPassword') && adddoctorForm.get('password')?.touched">
+              <small class="text-danger">Invalid password. Password must contain at least one uppercase letter, one
+                lowercase
+                letter, and one digit.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputName">Name</label>
+            <input type="text" class="form-control" id="InputName" placeholder="Name" name="name"
+              formControlName="name">
+            <div *ngIf="adddoctorForm.get('name')?.hasError('required') && adddoctorForm.get('name')?.touched">
+              <small class="text-danger">Name is required.</small>
+            </div>
+            <div *ngIf="adddoctorForm.get('name')?.hasError('invalidName') && adddoctorForm.get('name')?.touched">
+              <small class="text-danger">Invalid name. Only letters and spaces are allowed.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputDOB">DOB</label>
+            <input type="date" class="form-control" id="InputDOB" placeholder="DOB" name="dob" formControlName="dob">
+            <div
+              *ngIf="adddoctorForm.get('dob')?.hasError('required') && adddoctorForm.get('dob')?.touched">
+              <small class="text-danger">Date-of-Birth is required.</small>
+            </div>
+            <div *ngIf="adddoctorForm.get('dob')?.hasError('futureDate') && adddoctorForm.get('dob')?.touched">
+              <small class="text-danger">Enter a valid Date-of-Birth.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputGender">Gender</label>
+            <select class="form-select mb-3" aria-label="Gender" formControlName="gender">
+              <option value="" disabled selected>Select Gender</option>
+              <option [ngValue]="enumGender.Male">Male</option>
+              <option [ngValue]="enumGender.Female">Female</option>
+            </select>
+            <div
+              *ngIf="adddoctorForm.get('gender')?.hasError('required') && adddoctorForm.get('gender')?.touched">
+              <small class="text-danger">Please select gender</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputPhoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="InputPhoneNumber" placeholder="Phone Number" name="phoneNumber"
+              formControlName="phoneNumber">
+            <div
+              *ngIf="adddoctorForm.get('phoneNumber')?.hasError('required') && adddoctorForm.get('phoneNumber')?.touched">
+              <small class="text-danger">PhoneNumber is required.</small>
+            </div>
+            <div
+              *ngIf="adddoctorForm.get('phoneNumber')?.hasError('PhoneNumber') && adddoctorForm.get('phoneNumber')?.touched">
+              <small class="text-danger">Invalid phone number.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputAddress">Address</label>
+            <textarea class="form-control" id="InputAddress" rows="3" name="address"
+              formControlName="address"></textarea>
+            <div *ngIf="adddoctorForm.get('address')?.hasError('required') && adddoctorForm.get('address')?.touched">
+              <small class="text-danger">Address is required.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputSpecialization">Specialization</label>
+            <input type="text" class="form-control" id="InputSpecialization" placeholder="Specialization"
+              name="specialization" formControlName="specialization">
+            <div
+              *ngIf="adddoctorForm.get('specialization')?.hasError('required') && adddoctorForm.get('specialization')?.touched">
+              <small class="text-danger">Specialization is required.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputExperience">Experience</label>
+            <input type="text" class="form-control" id="InputExperience" placeholder="Experience" name="experience"
+              formControlName="experience">
+            <div
+              *ngIf="adddoctorForm.get('experience')?.hasError('required') && adddoctorForm.get('experience')?.touched">
+              <small class="text-danger">Experience is required.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputImage">Image</label>
+            <fieldset class="mb-3">
+              <div class="custom-file fileInputProfileWrap">
+                <div class="row col-md-12">
+                  <input type="file" class="form-control" (change)="CreateBase64String($event)"
+                    class="fileInputProfile form-control">
+                </div>
+                <div class="img-space">
+                  <ng-container *ngIf="isImageSaved;">
+                    <img [src]="cardImageBase64" style="width: 100px;height:100px;" />
+                  </ng-container>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="mb-3">
+            <br><button class="btn btn-color px-5 mb-5 w-100" type="submit" >Add doctor</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\DoctorAppoinmentSystem\Publish\Backend</_PublishTargetUrl>
+    <History>True|2024-01-09T09:00:18.0828962Z;True|2024-01-02T14:36:15.7989328+05:30;False|2024-01-02T14:35:51.2820888+05:30;True|2024-01-02T12:57:30.0644832+05:30;True|2024-01-02T12:54:48.8958899+05:30;True|2024-01-02T12:53:36.0299991+05:30;True|2024-01-02T12:51:22.2646397+05:30;True|2023-12-16T07:04:24.7477970+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Model/DoctorAvailability.cs">
+      <publishTime>12/21/2023 17:06:43</publishTime>
+    </File>
+  </ItemGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DBConnection">
+      <Value>Server=SYSLP820%3bDatabase=doctor%3bTrusted_Connection=True%3bTrustServerCertificate=True</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

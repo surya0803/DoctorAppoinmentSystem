@@ -1,0 +1,102 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+        <form class="p-4" [formGroup]="updateDoctorForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="InputUserName">Username</label>
+              <input type="text" class="form-control" id="InputUserName" placeholder="Enter UserName" name="userName"
+                formControlName="userName" readonly>
+              <div
+                *ngIf="updateDoctorForm.get('userName')?.hasError('required') && updateDoctorForm.get('userName')?.touched">
+                <small class="text-danger">Username is required.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="InputPassword">Password</label>
+              <input type="password" class="form-control" id="InputPassword" placeholder="Password" name="password"
+                formControlName="password">
+              <div
+                *ngIf="updateDoctorForm.get('password')?.hasError('required') && updateDoctorForm.get('password')?.touched">
+                <small class="text-danger">Password is required.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="InputName">Name</label>
+              <input type="text" class="form-control" id="InputName" placeholder="Name" name="name"
+                formControlName="name">
+              <div *ngIf="updateDoctorForm.get('name')?.hasError('required') && updateDoctorForm.get('name')?.touched">
+                <small class="text-danger">Name is required.</small>
+              </div>
+              <div *ngIf="updateDoctorForm.get('name')?.hasError('invalidName') && updateDoctorForm.get('name')?.touched">
+                <small class="text-danger">Invalid name. Only letters and spaces are allowed.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="InputPhoneNumber">Phone Number</label>
+              <input type="text" class="form-control" id="InputPhoneNumber" placeholder="Phone Number" name="phoneNumber"
+                formControlName="phoneNumber">
+              <div
+                *ngIf="updateDoctorForm.get('phoneNumber')?.hasError('required') && updateDoctorForm.get('phoneNumber')?.touched">
+                <small class="text-danger">phoneNumber is required.</small>
+              </div>
+              <div
+                *ngIf="updateDoctorForm.get('phoneNumber')?.hasError('PhoneNumber') && updateDoctorForm.get('phoneNumber')?.touched">
+                <small class="text-danger">Invalid Indian phone number.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="InputAddress">Address</label>
+              <textarea class="form-control" id="InputAddress" rows="3" name="address"
+                formControlName="address"></textarea>
+              <div
+                *ngIf="updateDoctorForm.get('address')?.hasError('required') && updateDoctorForm.get('address')?.touched">
+                <small class="text-danger">Address is required.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="InputSpecialization">Specialization</label>
+              <input type="text" class="form-control" id="InputSpecialization" placeholder="Specialization"
+                name="specialization" formControlName="specialization">
+              <div
+                *ngIf="updateDoctorForm.get('specialization')?.hasError('required') && updateDoctorForm.get('specialization')?.touched">
+                <small class="text-danger">Specialization is required.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="InputExperience">Experience</label>
+              <input type="text" class="form-control" id="InputExperience" placeholder="Experience" name="experience"
+                formControlName="experience">
+              <div
+                *ngIf="updateDoctorForm.get('experience')?.hasError('required') && updateDoctorForm.get('experience')?.touched">
+                <small class="text-danger">Experience is required.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="InputImage">Image</label>
+              <fieldset class="mb-3">
+                <div class="custom-file fileInputProfileWrap">
+                  <div class="row col-md-12">
+                    <input type="file" class="form-control" (change)="CreateBase64String($event)"
+                      class="fileInputProfile form-control">
+                  </div>
+                  <div class="img-space">
+                    <ng-container *ngIf="isImageSaved;">
+                      <img [src]="cardImageBase64" style="width: 100px;height:100px;" />
+                    </ng-container>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="mb-3" *ngIf="false">
+              <label for="InputUpdatedBy">Updated By</label>
+              <input type="text" class="form-control" id="InputUpdatedBy" placeholder="Updated By" name="updatedBy"
+                formControlName="updatedBy">
+            </div>
+            <div class="text-center">
+              <br><button type="submit" class="btn btn-color px-5 mb-5 w-100">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>

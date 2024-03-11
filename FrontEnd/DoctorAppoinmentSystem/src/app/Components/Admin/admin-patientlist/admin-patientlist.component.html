@@ -1,0 +1,49 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container-fluid" id="container">
+  <div class="container-fluid bg-light" id="container-table-1">
+    <div class="container-fluid table-responsive" id="container-table-2">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S.no</th>
+            <th scope="col">Image</th>
+            <th scope="col">Username</th>
+            <th scope="col">Name</th>
+            <th scope="col">Blood Group</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Height</th>
+            <th scope="col">Weight</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Address</th>
+            <th scope="col">Created By</th>
+            <th scope="col">Created Date Time</th>
+            <th scope="col">Updated By</th>
+            <th scope="col">Updated Date Time</th>
+            <th scope="col">Edit Patient</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of patients; let i = index">
+            <th>{{ i + 1 }}</th>
+            <td><img id="patients-image"[src]="item.image" alt="{{item.userName}}"></td>
+            <td>{{item.userName}}</td>
+            <td>{{item.name}}</td>
+            <td>{{enumBloodGroup[item.bloodGroup]}}</td>
+            <td>{{enumGender[item.gender]}}</td>
+            <td>{{item.height}}</td>
+            <td>{{item.weight}}</td>
+            <td>{{item.dob | date:'yyyy-MM-dd'}}</td>
+            <td>{{item.phoneNumber}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.createdBy}}</td>
+            <td>{{item.createdDateTime | daysAgo}}</td>
+            <td>{{item.updatedBy}}</td>
+            <td>{{item.updatedDateTime | daysAgo}}</td>
+            <td><button class="btn btn-success" (click)="openEditPatientDialog(item)">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<app-patient-navbar></app-patient-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center text-dark mt-5">Book Appointment</h2>
+      <div class="card my-5">
+        <form class="card-body cardbody-color p-lg-5" [formGroup]="bookappoinmentForm" (ngSubmit)="onSubmit()">
+          <div class="form-group" *ngIf="false">
+            <label for="InputPatientId">Patient Id</label>
+            <input type="text" class="form-control" id="InputPatientId" placeholder="Enter Id" name="patientId"
+              formControlName="patientId">
+          </div>
+          <div class="form-group">
+            <label for="InputDoctorId">Select Doctor</label>
+            <div class="mb-3">
+              <select class="form-select mb-3" aria-label="DoctorNameSpecialization" formControlName="doctorId">
+                <option value="" disabled selected>Select Doctor</option>
+                <option *ngFor="let item of doctors" [value]="item.id">{{item.name}} : {{item.specialization}}</option>
+              </select>
+            </div>
+            <div
+              *ngIf="bookappoinmentForm.get('doctorId')?.hasError('required') && bookappoinmentForm.get('doctorId')?.touched">
+              <small class="text-danger">Select Doctor.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputPatientPurpose">Purpose</label>
+            <input type="text" class="form-control" id="InputPurpose" placeholder="Purpose" name="purpose"
+              formControlName="purpose">
+            <div
+              *ngIf="bookappoinmentForm.get('purpose')?.hasError('required') && bookappoinmentForm.get('purpose')?.touched">
+              <small class="text-danger">Purpose is required.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputDescription">Description</label>
+            <input type="text" class="form-control" id="InputDescription" placeholder="Description" name="description"
+              formControlName="description">
+            <div
+              *ngIf="bookappoinmentForm.get('description')?.hasError('required') && bookappoinmentForm.get('description')?.touched">
+              <small class="text-danger">Description is required.</small>
+            </div>
+          </div>
+          <div class="my-3">
+            <label for="InputDate">Date</label>
+            <input type="date" class="form-control" id="InputDate" name="date" formControlName="date"
+              (change)="onDoctorSelected()">
+            <div
+              *ngIf="bookappoinmentForm.get('date')?.hasError('required') && bookappoinmentForm.get('date')?.touched">
+              <small class="text-danger">Date is required.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputTimeSlot">Select Time Slot</label>
+            <div class="mb-3">
+              <select class="form-select mb-3" aria-label="TimeSlot" formControlName="timeSlotId"
+                (change)="onStartTimeSelected()">
+                <option value="" disabled selected>Select Time Slot</option>
+                <option *ngFor="let item of timeslots" [value]="item.id">
+                  {{
+                  commonpropertiesService.formatTime(item.startTime)}}:{{commonpropertiesService.formatTime(item.endTime)}}
+                </option>
+              </select>
+              <div
+                *ngIf="bookappoinmentForm.get('startTime')?.hasError('required') && bookappoinmentForm.get('startTime')?.touched">
+                <small class="text-danger">Select time slot</small>
+              </div>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <br><button type="submit" class="btn btn-color px-5 mb-5 w-100">Book Appoinment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
