@@ -413,7 +413,7 @@ namespace Patient.Repository
             }
             return list;
         }
-        public List<DistrictModel> GetDistrict()
+        public List<DistrictModel> GetDistrict(long stateId)
         {
             List<DistrictModel> list = new List<DistrictModel>();
             using (SqlConnection conn = new SqlConnection(connection))
@@ -424,6 +424,7 @@ namespace Patient.Repository
                     using (SqlCommand cmd = new SqlCommand("SPS_District", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@StateId", stateId);
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())

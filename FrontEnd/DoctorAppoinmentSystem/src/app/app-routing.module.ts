@@ -22,6 +22,7 @@ import { AdminEditpatientComponent } from './Components/Admin/admin-editpatient/
 import { AdminNavbarComponent } from './Components/Admin/admin-navbar/admin-navbar.component';
 import { PatientNavbarComponent } from './Components/Patient/patient-navbar/patient-navbar.component';
 import { DoctorNavbarComponent } from './Components/Doctor/doctor-navbar/doctor-navbar.component';
+import { AdminAddHospitalComponent } from './Components/Admin/admin-add-hospital/admin-add-hospital.component';
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login',component:LoginComponent},
@@ -45,7 +46,8 @@ const routes: Routes = [
   { path: 'doctor-update-appoinmentstatus',component:DoctorViewallappoinmentComponent},
   { path: 'admin-navbar',component:AdminNavbarComponent},
   { path: 'doctor-navbar',component:DoctorNavbarComponent},
-  { path: 'patient-navbar',component:PatientNavbarComponent}
+  { path: 'patient-navbar',component:PatientNavbarComponent},
+  { path: 'admin-add-hospital',component:AdminAddHospitalComponent}
 ];
 
 @NgModule({

@@ -4,8 +4,8 @@
     {
         public long Id { get; set; }
         public string Name { get; set; }
-        public string State { get; set; }
-        public string District { get; set; }
+        public long State { get; set; }
+        public long District { get; set; }
         public string Location { get; set; }
         public string Pincode { get; set; }
         public string Address { get; set; }

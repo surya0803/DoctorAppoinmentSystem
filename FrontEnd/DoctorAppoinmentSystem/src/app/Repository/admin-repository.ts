@@ -6,6 +6,7 @@ import { doctor } from "../Model/doctor";
 import { admin } from "../Model/admin";
 import { state } from "../Model/state";
 import { district } from "../Model/district";
+import { hospital } from "../Model/hospital";
 @Injectable({
     providedIn:'root'
 })
@@ -19,6 +20,9 @@ export class AdminRepository{
     async postAddDoctor(doctor:doctor):Promise<doctor>{
         return await this.apiInvoker.post('Admin/AddNewDoctor',doctor);
     }
+    async postAddHospital(hospital:hospital):Promise<hospital>{
+        return await this.apiInvoker.post('Admin/AddNewHospital',hospital);
+    }
     async  getAllAppoinment():Promise<appoinment[]>{
         return await this.apiInvoker.get<appoinment[]>('Admin/GetAllAppoinmentDetails');
     }
@@ -31,7 +35,7 @@ export class AdminRepository{
     async getState():Promise<state[]>{
         return await this.apiInvoker.get<state[]>('Admin/GetState');
     }
-    async getDistrict():Promise<district[]>{
-        return await this.apiInvoker.get<district[]>('Admin/GetDistrict');
+    async getDistrict(stateId:number):Promise<district[]>{
+        return await this.apiInvoker.get<district[]>(`Admin/GetDistrict?StateId=${stateId}`);
     }
 }

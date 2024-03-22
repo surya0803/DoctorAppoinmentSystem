@@ -1,0 +1,118 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card my-5">
+        <form [formGroup]="addHospitalForm" (ngSubmit)="onSubmit()" class="card-body cardbody-color p-lg-5">
+          <div class="mb-3">
+                <label for="InputHospitalName">Hospital Name</label>
+                <input type="text" class="form-control" id="Hospital" placeholder="Name" name="name"
+                  formControlName="name">
+                <div *ngIf="addHospitalForm.get('name')?.hasError('required') && addHospitalForm.get('name')?.touched">
+                  <small class="text-danger">Name is required.</small>
+                </div>
+                <div *ngIf="addHospitalForm.get('name')?.hasError('invalidName') && addHospitalForm.get('name')?.touched">
+                  <small class="text-danger">Invalid name. Only letters and spaces are allowed.</small>
+                </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputState">State</label>
+            <select class="form-select mb-3" aria-label="state" formControlName="state" (change)="onChangeState()">
+                <option value="" disabled selected>Select State</option>
+                <option *ngFor="let item of state" [value]="item.id">{{item.name}}</option>
+            </select>
+         </div>
+         <div class="mb-3">
+            <label for="InputDistrict">District</label>
+            <select class="form-select mb-3" aria-label="district" formControlName="district">
+                <option value="" disabled selected>Select District</option>
+                <option *ngFor="let item of district" [value]="item.id">{{item.name}}</option>
+            </select>
+         </div>
+         <div class="mb-3">
+            <label for="InputLocation">Location</label>
+            <input type="text" class="form-control" id="InputLocation" placeholder="Enter Location" name="location"
+              formControlName="location">
+            <div *ngIf="addHospitalForm.get('location')?.hasError('required') && addHospitalForm.get('location')?.touched">
+              <small class="text-danger">Username is required.</small>
+            </div>      
+          </div>
+          <div class="mb-3">
+            <label for="InputPincode">Pincode</label>
+            <input type="text" class="form-control" id="InputPincode" placeholder="Enter Pincode" name="pincode"
+              formControlName="Pincode">
+            <div *ngIf="addHospitalForm.get('pincode')?.hasError('required') && addHospitalForm.get('pincode')?.touched">
+              <small class="text-danger">Username is required.</small>
+            </div>      
+          </div>
+          <div class="mb-3">
+            <label for="InputEmail">Email</label>
+            <input type="text" class="form-control" id="InputEmail" placeholder="Enter Email" name="email"
+              formControlName="email">
+            <div *ngIf="addHospitalForm.get('email')?.hasError('required') && addHospitalForm.get('email')?.touched">
+              <small class="text-danger">Username is required.</small>
+            </div>      
+          </div>
+          <div class="mb-3">
+            <label for="InputWebsite">Webisite</label>
+            <input type="text" class="form-control" id="InputWebsite" placeholder="Enter Website" name="website"
+              formControlName="website">
+            <div *ngIf="addHospitalForm.get('website')?.hasError('required') && addHospitalForm.get('website')?.touched">
+              <small class="text-danger">Username is required.</small>
+            </div>      
+          </div>
+          <div class="mb-3">
+            <label for="InputAdministratorUserName">Administrator Username</label>
+            <input type="text" class="form-control" id="InputAdministratorUserName" placeholder="Enter Username" name="administratorUserName"
+              formControlName="administratorUserName">
+            <div *ngIf="addHospitalForm.get('administratorUserName')?.hasError('required') && addHospitalForm.get('administratorUserName')?.touched">
+              <small class="text-danger">Username is required.</small>
+            </div>
+            <!--
+            <div *ngIf="addHospitalForm.get('administratorUserName')?.hasError('userNameExists')">
+              <small class="text-danger">Username is not available.</small>
+            </div>    -->        
+          </div>
+          <div class="mb-3">
+            <label for="InputAdministratorName">Administrator Name</label>
+            <input type="text" class="form-control" id="InputAdministratorName" placeholder="Enter Username" name="administratorName"
+              formControlName="administratorName">
+            <div *ngIf="addHospitalForm.get('administratorName')?.hasError('required') && addHospitalForm.get('administratorName')?.touched">
+              <small class="text-danger">Username is required.</small>
+            </div>            
+          </div>
+          <div class="mb-3">
+            <label for="InputAdministratorPassword">Administrator Password</label>
+            <input type="password" class="form-control" id="Administrator" placeholder="Password" name="administratorPassword"
+              formControlName="administratorPassword">
+          </div>
+          
+          <div class="mb-3">
+            <label for="InputPhoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="InputPhoneNumber" placeholder="Phone Number" name="phoneNumber"
+              formControlName="phoneNumber">
+            <div
+              *ngIf="addHospitalForm.get('phoneNumber')?.hasError('required') && addHospitalForm.get('phoneNumber')?.touched">
+              <small class="text-danger">PhoneNumber is required.</small>
+            </div>
+            <div
+              *ngIf="addHospitalForm.get('phoneNumber')?.hasError('PhoneNumber') && addHospitalForm.get('phoneNumber')?.touched">
+              <small class="text-danger">Invalid phone number.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputAddress">Address</label>
+            <textarea class="form-control" id="InputAddress" rows="3" name="address"
+              formControlName="address"></textarea>
+            <div *ngIf="addHospitalForm.get('address')?.hasError('required') && addHospitalForm.get('address')?.touched">
+              <small class="text-danger">Address is required.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <br><button class="btn btn-color px-5 mb-5 w-100" type="submit" >Add doctor</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

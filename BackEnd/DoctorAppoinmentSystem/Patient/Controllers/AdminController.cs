@@ -65,6 +65,14 @@ namespace Patient.Controllers
             return BadRequest("Unsuccessfull");
         }
 
+        [HttpPost("AddNewHospital")]
+        public IActionResult PostHospital(HospitalModel hospitalModel)
+        {
+            int result = _IAdminRespository.PostNewHospital(hospitalModel);
+            if (result != 0) return Ok(result);
+            return BadRequest("Unsuccessfull");
+        }
+
         [HttpGet("GetPatientByUserName")]
         public IActionResult GetPatientByUserName(String UserName) { 
             var result=_IAdminRespository.GetPatientDetailsByUserName(UserName);
@@ -88,9 +96,9 @@ namespace Patient.Controllers
             return BadRequest("UnSuccessfull");
         }
         [HttpGet("GetDistrict")]
-        public IActionResult GetDistrict()
+        public IActionResult GetDistrict(long StateId)
         {
-            var result = _IAdminRespository.GetDistrict();
+            var result = _IAdminRespository.GetDistrict(StateId);
             if (result.Any()) return Ok(result);
             return BadRequest("UnSuccessfull");
         }

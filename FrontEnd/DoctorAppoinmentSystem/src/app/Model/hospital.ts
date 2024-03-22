@@ -1,8 +1,8 @@
 export interface hospital{
     id: number;
     name: string;
-    state: string;
-    district: string;
+    state: number;
+    district: number;
     location: string;
     pincode: string;
     address: string;

@@ -23,7 +23,6 @@ export class AdminDashboardComponent {
   }
   async getAllPatient() {
     this.patients=await this.adminRepository.GetAllPatient();
-    console.log("api",await this.adminRepository.getDistrict());
    }
    async getAllDoctor() {
     this.doctors=await this.adminRepository.getAllDoctor();

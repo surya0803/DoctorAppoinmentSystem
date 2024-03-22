@@ -11,7 +11,7 @@ namespace Patient.Repository
         int PostNewHospital(HospitalModel hospitalModel);
 
         List<StateModel> GetState();
-        List<DistrictModel> GetDistrict();
+        List<DistrictModel> GetDistrict(long stateId);
         List<PatientModel> GetPatientDetails();
         List<DoctorModel> GetDoctorDetails();
 

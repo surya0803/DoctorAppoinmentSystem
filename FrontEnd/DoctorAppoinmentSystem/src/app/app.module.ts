@@ -32,6 +32,7 @@ import { AdminNavbarComponent } from './Components/Admin/admin-navbar/admin-navb
 import { DoctorNavbarComponent } from './Components/Doctor/doctor-navbar/doctor-navbar.component';
 import { PatientNavbarComponent } from './Components/Patient/patient-navbar/patient-navbar.component';
 import { CommonpropertiesService } from './Service/commonproperties.service';
+import { AdminAddHospitalComponent } from './Components/Admin/admin-add-hospital/admin-add-hospital.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,8 @@ import { CommonpropertiesService } from './Service/commonproperties.service';
     DoctorViewallappoinmentComponent,
     AdminNavbarComponent,
     DoctorNavbarComponent,
-    PatientNavbarComponent
+    PatientNavbarComponent,
+    AdminAddHospitalComponent
   ],
   imports: [
     BrowserModule,
