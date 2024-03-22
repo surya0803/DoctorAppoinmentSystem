@@ -20,7 +20,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Admin.SPS_AdminLogin", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_AdminLogin", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@UserName", username);
@@ -138,7 +138,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Admin.SPS_DoctorDetails", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_DoctorDetails", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         SqlDataReader reader = cmd.ExecuteReader();
@@ -277,7 +277,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Admin.SPI_Doctor", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPI_Doctor", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@HospitalId", doctor.HospitalId);
@@ -349,7 +349,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Admin.SPI_Hospital", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPI_Hospital", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Name", hospital.Name);

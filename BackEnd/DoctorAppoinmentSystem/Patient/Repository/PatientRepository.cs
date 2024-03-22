@@ -19,7 +19,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Patient.SPS_DoctorDetails", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_DoctorDetails", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         SqlDataReader reader = cmd.ExecuteReader();
@@ -98,7 +98,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Patient.SPS_PatientLogin", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_PatientLogin", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@UserName", username);
@@ -138,7 +138,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Patient.SPS_CheckAppoinmentSlots", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_CheckAppoinmentSlots", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@PatientId", PatientId);
@@ -178,7 +178,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Patient.SPI_Appoinment", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPI_Appoinment", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@DoctorId", appoinmentModel.DoctorId);
@@ -210,7 +210,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Patient.SPI_Patient", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPI_Patient", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@UserName", patientModel.UserName);

@@ -17,7 +17,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Doctor.SPS_DoctorLogin", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_DoctorLogin", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@UserName", username);
@@ -117,7 +117,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Doctor.SPS_HistoryOfAppoinment", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_HistoryOfAppoinment", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@DoctorUserName", UserName);
@@ -159,7 +159,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Doctor.SPS_TodayAppoinment", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_TodayAppoinment", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@DoctorUserName", UserName);
@@ -201,7 +201,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Doctor.SPS_UpcomingAppoinment", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_UpcomingAppoinment", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@DoctorUserName", UserName);
@@ -243,7 +243,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Doctor.SPU_AppoinmentStatus",conn))
+                    using (SqlCommand cmd = new SqlCommand("SPU_AppoinmentStatus",conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Id", Id);
@@ -270,7 +270,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Admin.SPS_DoctorDetails", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_DoctorDetails", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         SqlDataReader reader = cmd.ExecuteReader();
@@ -306,7 +306,7 @@ namespace Patient.Repository
                 try
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("Doctor.SPS_AppoinmentStatus", conn))
+                    using (SqlCommand cmd = new SqlCommand("SPS_AppoinmentStatus", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@DoctorUserName", UserName);
