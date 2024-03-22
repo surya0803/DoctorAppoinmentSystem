@@ -25,6 +25,7 @@ export class AdminAdddoctorComponent implements OnInit{
   ngOnInit() {
   }
      adddoctorForm: FormGroup = this.formBuilder.group({
+      hospitalId:['1'],
       userName: ['', Validators.required],
       password: ['', [Validators.required,this.commonpropertiesService.passwordValidator()]],
       name: ['', [Validators.required,this.commonpropertiesService.nameValidator()]],
@@ -68,6 +69,7 @@ export class AdminAdddoctorComponent implements OnInit{
   onSubmit(){
     if (this.adddoctorForm.valid) {
       const formData = this.adddoctorForm.value as doctor;
+      formData.hospitalId = 1;
       this.postAddDoctor(formData);
       console.log(formData);
     }

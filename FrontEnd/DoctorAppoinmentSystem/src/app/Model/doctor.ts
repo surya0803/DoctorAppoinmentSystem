@@ -14,6 +14,7 @@ export interface doctor {
     createdDateTime: Date | string;
     updatedBy: string;
     updatedDateTime: Date | string;
+    hospitalId : number;
   }
   
   export enum Gender{

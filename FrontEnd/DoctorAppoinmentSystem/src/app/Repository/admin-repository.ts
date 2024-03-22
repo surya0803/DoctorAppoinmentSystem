@@ -4,6 +4,8 @@ import {appoinment} from "../Model/appoinment";
 import { patient } from "../Model/patient";
 import { doctor } from "../Model/doctor";
 import { admin } from "../Model/admin";
+import { state } from "../Model/state";
+import { district } from "../Model/district";
 @Injectable({
     providedIn:'root'
 })
@@ -25,5 +27,11 @@ export class AdminRepository{
     }
     async getUserName(UserName:string):Promise<admin[]>{
         return await this.apiInvoker.get<admin[]>(`Admin/GetUserName?UserName=${UserName}`);
+    }
+    async getState():Promise<state[]>{
+        return await this.apiInvoker.get<state[]>('Admin/GetState');
+    }
+    async getDistrict():Promise<district[]>{
+        return await this.apiInvoker.get<district[]>('Admin/GetDistrict');
     }
 }
