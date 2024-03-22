@@ -280,6 +280,7 @@ namespace Patient.Repository
                     using (SqlCommand cmd = new SqlCommand("Admin.SPI_Doctor", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@HospitalId", doctor.HospitalId);
                         cmd.Parameters.AddWithValue("@UserName", doctor.UserName);
                         cmd.Parameters.AddWithValue("@Password", doctor.Password);
                         cmd.Parameters.AddWithValue("@Name", doctor.Name);
@@ -338,6 +339,115 @@ namespace Patient.Repository
                 }
             }
             return result;
+        }
+
+        public int PostNewHospital(HospitalModel hospital)
+        {
+            int result = 0;
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("Admin.SPI_Hospital", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Name", hospital.Name);
+                        cmd.Parameters.AddWithValue("@State", hospital.State);
+                        cmd.Parameters.AddWithValue("@District", hospital.District);
+                        cmd.Parameters.AddWithValue("@Location", hospital.Location);
+                        cmd.Parameters.AddWithValue("@Pincode", hospital.Pincode);
+                        cmd.Parameters.AddWithValue("@Address", hospital.Address);
+                        cmd.Parameters.AddWithValue("@PhoneNumber", hospital.PhoneNumber);
+                        cmd.Parameters.AddWithValue("@Email", hospital.Email);
+                        cmd.Parameters.AddWithValue("@Website", hospital.Website);
+                        cmd.Parameters.AddWithValue("@AdministratorName", hospital.AdministratorName);
+                        cmd.Parameters.AddWithValue("@AdministratorUserName", hospital.AdministratorUserName);
+                        cmd.Parameters.AddWithValue("@AdministratorPassword", hospital.AdministratorPassword);
+                        result = cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            return result;
+        }
+        public List<StateModel> GetState()
+        {
+            List<StateModel> list = new List<StateModel>();
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("SPS_State", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                StateModel state = new StateModel();
+                                state.Id = Convert.ToInt32(reader["Id"]);
+                                state.Name = Convert.ToString(reader["Name"]);
+                                list.Add(state);
+                            }
+                            reader.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            return list;
+        }
+        public List<DistrictModel> GetDistrict()
+        {
+            List<DistrictModel> list = new List<DistrictModel>();
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("SPS_District", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                DistrictModel district = new DistrictModel();
+                                district.Id = Convert.ToInt32(reader["Id"]);
+                                district.StateId = Convert.ToInt32(reader["StateId"]);
+                                district.Name = Convert.ToString(reader["Name"]);
+                                list.Add(district);
+                            }
+                            reader.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            return list;
         }
     }
 }

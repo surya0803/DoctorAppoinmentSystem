@@ -79,5 +79,20 @@ namespace Patient.Controllers
             if (result.Any()) return Ok(result);
             return BadRequest("UnSuccessfull");
         }
+
+        [HttpGet("GetState")]
+        public IActionResult GetState()
+        {
+            var result = _IAdminRespository.GetState();
+            if (result.Any()) return Ok(result);
+            return BadRequest("UnSuccessfull");
+        }
+        [HttpGet("GetDistrict")]
+        public IActionResult GetDistrict()
+        {
+            var result = _IAdminRespository.GetDistrict();
+            if (result.Any()) return Ok(result);
+            return BadRequest("UnSuccessfull");
+        }
     }
 }

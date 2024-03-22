@@ -7,7 +7,11 @@ namespace Patient.Repository
         List<AdminModel> GetAdminLogin(string UserName,string Password);
 
         int PostNewDoctor(DoctorModel doctorModel);
+        
+        int PostNewHospital(HospitalModel hospitalModel);
 
+        List<StateModel> GetState();
+        List<DistrictModel> GetDistrict();
         List<PatientModel> GetPatientDetails();
         List<DoctorModel> GetDoctorDetails();
 
