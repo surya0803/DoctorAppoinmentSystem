@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DoctorAppoinmentSystem\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj": {}
+    "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj": {}
   },
   "projects": {
-    "D:\\DoctorAppoinmentSystem\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj": {
+    "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DoctorAppoinmentSystem\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
+        "projectUniqueName": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
         "projectName": "Patient",
-        "projectPath": "D:\\DoctorAppoinmentSystem\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
-        "packagesPath": "C:\\Users\\surya.duraisamy\\.nuget\\packages\\",
-        "outputPath": "D:\\DoctorAppoinmentSystem\\BackEnd\\DoctorAppoinmentSystem\\Patient\\obj\\",
+        "projectPath": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
+        "packagesPath": "C:\\Users\\91733\\.nuget\\packages\\",
+        "outputPath": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\surya.duraisamy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\91733\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
