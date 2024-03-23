@@ -27,6 +27,7 @@ export class PatientBookappoinmentComponent implements OnInit {
   doctors: doctor[] = [];
   timeslots: timeslot[] = [];
   enumStatus = status;
+  
   bookappoinmentForm: FormGroup = this.formBuilder.group({
     patientId: [this.commonpropertiesService.getId(), Validators.required],
     doctorId: ['', Validators.required],

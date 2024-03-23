@@ -18,10 +18,10 @@
           <li class="nav-item">
             <a class="nav-link text-white" routerLink="/admin-view-all-appoinment">View all appointment</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="usertype == '4'">
             <a class="nav-link text-white" routerLink="/admin-add-doctor">Add doctor</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="usertype == '1'">
             <a class="nav-link text-white" routerLink="/admin-add-hospital">Add Hospital</a>
           </li>
         </ul>

@@ -4,6 +4,8 @@ namespace Patient.Repository
 {
     public interface IAdminRepository
     {
+
+        List<AdminModel> GetLogin(string UserName, string Password);
         List<AdminModel> GetAdminLogin(string UserName,string Password);
 
         int PostNewDoctor(DoctorModel doctorModel);

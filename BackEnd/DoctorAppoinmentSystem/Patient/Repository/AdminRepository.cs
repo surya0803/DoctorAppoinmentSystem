@@ -12,6 +12,46 @@ namespace Patient.Repository
             connection = configuration.GetConnectionString("DBConnection");
         }
 
+        public List<AdminModel> GetLogin(string username, string password)
+        {
+            List<AdminModel> list = new List<AdminModel>();
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("SPS_Login", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@UserName", username);
+                        cmd.Parameters.AddWithValue("@Password", password);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                AdminModel adminModel = new AdminModel();
+
+                                adminModel.Id = Convert.ToInt64(reader["Id"]);
+                                adminModel.UserName = Convert.ToString(reader["UserName"]);
+                                adminModel.Password = Convert.ToString(reader["UserType"]);
+                                list.Add(adminModel);
+                            }
+                            reader.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            return list;
+        }
+
         public List<AdminModel> GetAdminLogin(string username, string password)
         {
             List<AdminModel> list = new List<AdminModel>();

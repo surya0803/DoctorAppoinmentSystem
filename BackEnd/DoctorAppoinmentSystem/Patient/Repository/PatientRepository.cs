@@ -11,40 +11,40 @@ namespace Patient.Repository
             connection = configuration.GetConnectionString("DBConnection");
         }
 
-        public List<DoctorModel> GetAllDoctorSpecialization()
-        {
-            List<DoctorModel> list = new List<DoctorModel>();
-            using (SqlConnection conn = new SqlConnection(connection))
+            public List<DoctorModel> GetAllDoctorSpecialization()
             {
-                try
+                List<DoctorModel> list = new List<DoctorModel>();
+                using (SqlConnection conn = new SqlConnection(connection))
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("SPS_DoctorDetails", conn))
+                    try
                     {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        while (reader.Read())
+                        conn.Open();
+                        using (SqlCommand cmd = new SqlCommand("SPS_DoctorDetails", conn))
                         {
-                            DoctorModel doctormodel = new DoctorModel();
-                            doctormodel.Id = Convert.ToInt64(reader["Id"]);
-                            doctormodel.Name = Convert.ToString(reader["Name"]);
-                            doctormodel.Specialization = Convert.ToString(reader["Specialization"]);
-                            list.Add(doctormodel);
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            while (reader.Read())
+                            {
+                                DoctorModel doctormodel = new DoctorModel();
+                                doctormodel.Id = Convert.ToInt64(reader["Id"]);
+                                doctormodel.Name = Convert.ToString(reader["Name"]);
+                                doctormodel.Specialization = Convert.ToString(reader["Specialization"]);
+                                list.Add(doctormodel);
+                            }
+                            reader.Close();
                         }
-                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.ToString());
+                    }
+                    finally
+                    {
+                        conn.Close();
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                return list;
             }
-            return list;
-        }
 
         public List<SelectAppoinmentModel> GetAppoinmentStatus(string UserName)
         {
@@ -58,7 +58,7 @@ namespace Patient.Repository
                     using (SqlCommand cmd = new SqlCommand("SPS_AppoinmentStatus", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@PatientUserName", UserName);
+                        cmd.Parameters.AddWithValue("@DoctorUserName", UserName);
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())

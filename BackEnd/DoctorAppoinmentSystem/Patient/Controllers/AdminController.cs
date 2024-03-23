@@ -17,9 +17,17 @@ namespace Patient.Controllers
         }
 
         [HttpPost("AdminLogin")]
-        public IActionResult GetAdminLogin(string UserName,string Password)
+        public IActionResult GetAdminLogin(string UserName, string Password)
         {
             var test = _IAdminRespository.GetAdminLogin(UserName, Password);
+            if (test.Any()) return Ok(test);
+            return BadRequest("Unsuccessfull");
+        }
+
+        [HttpPost("Login")]
+        public IActionResult GetLogin(string UserName, string Password)
+        {
+            var test = _IAdminRespository.GetLogin(UserName, Password);
             if (test.Any()) return Ok(test);
             return BadRequest("Unsuccessfull");
         }
