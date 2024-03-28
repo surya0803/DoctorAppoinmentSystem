@@ -1,12 +1,12 @@
 import { Time } from '@angular/common';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { AbstractControl,ValidatorFn } from '@angular/forms';
 import { LocalStorageService } from './local-storage.service';
 import { loginUserDetails } from '../Model/loginUserDetails';
 @Injectable({
   providedIn: 'root'
 })
-export class CommonpropertiesService {
+export class CommonpropertiesService implements OnInit{
   public username: any;
   public id:any;
   public password:any;
@@ -16,6 +16,10 @@ export class CommonpropertiesService {
   constructor(
     private localStorageService:LocalStorageService
   ) { }
+
+  ngOnInit(): void {
+      this.getDetails();
+  }
   
   setDetails(username:string,id:number,image:string,password:string){
     if(image==null)image=this.image;
@@ -25,11 +29,11 @@ export class CommonpropertiesService {
       image: image,
       userType: password,
   };
-    this.localStorageService.addDataToLocalStorage('loginUserDetails',loginUserDetails);
+    this.localStorageService.addDataToLocalStorage('loginUserDetails',JSON.stringify(loginUserDetails));
   }
   
   getDetails(){
-    const loginUserDetails: loginUserDetails = this.localStorageService.getDataFromLocalStorage('loginUserDetails');
+    const loginUserDetails: loginUserDetails = JSON.parse(this.localStorageService.getDataFromLocalStorage('loginUserDetails'));
     this.id=loginUserDetails.id;
     this.username=loginUserDetails.username;
     this.password=loginUserDetails.userType;
@@ -42,18 +46,22 @@ export class CommonpropertiesService {
   }
 
   getUserName(){
+    this.getDetails();
     return this.username;
   }
 
   getId(){
+    this.getDetails();
     return this.id;
   }
 
   getImage(){
+    this.getDetails();
     return this.image;
   }
   
   setHospitalId(id:number){
+    this.getDetails();
     this.hospitalId=id;
   }
 

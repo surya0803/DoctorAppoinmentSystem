@@ -1,32 +1,48 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { doctor } from 'src/app/Model/doctor';
+import { state } from 'src/app/Model/state';
+import { timeslot } from 'src/app/Model/timslot';
+import { district } from 'src/app/Model/district';
+import { hospital } from 'src/app/Model/hospital';
 import { appoinment, status } from 'src/app/Model/appoinment';
+import { bookappoinment } from 'src/app/Model/BookAppoinment';
+import { AdminRepository } from 'src/app/Repository/admin-repository';
 import { PatientRepository } from 'src/app/Repository/patient-repository';
 import { CommonpropertiesService } from 'src/app/Service/commonproperties.service';
-import { timeslot } from 'src/app/Model/timslot';
-import { bookappoinment } from 'src/app/Model/BookAppoinment';
-import { Router } from '@angular/router';
 @Component({
   selector: 'app-patient-bookappoinment',
   templateUrl: './patient-bookappoinment.component.html',
   styleUrls: ['./patient-bookappoinment.component.css']
 })
 export class PatientBookappoinmentComponent implements OnInit {
+  
   constructor(
-    private patientRepository: PatientRepository, 
     private formBuilder: FormBuilder, 
+    private adminRepository:AdminRepository,
+    private patientRepository: PatientRepository, 
     public commonpropertiesService: CommonpropertiesService,
     private router:Router) { }
-  ngOnInit(): void {
-    this.getDoctorSpecialization();
+  
+    ngOnInit(): void {
+      this.getHospitalDetails('');
+      this.getDoctorSpecialization();
+      this.getState();
+      this.filterDoctors=[];
   }
+
   LoginUserName=this.commonpropertiesService.getUserName();
   LoginUserImage=this.commonpropertiesService.getImage();
   LoginId=this.commonpropertiesService.getId();
-  doctors: doctor[] = [];
-  timeslots: timeslot[] = [];
   enumStatus = status;
+  state!:state[];
+  doctors!: doctor[];
+  filterDoctors!:doctor[];
+  district!:district[];
+  timeslots!: timeslot[];
+  hospitalDetails!:hospital[];
+  filterHospitalDetails!:hospital[];
   
   bookappoinmentForm: FormGroup = this.formBuilder.group({
     patientId: [this.commonpropertiesService.getId(), Validators.required],
@@ -37,6 +53,20 @@ export class PatientBookappoinmentComponent implements OnInit {
     timeSlotId: ['',Validators.required],
     status: [this.enumStatus['NotYetApproved'], Validators.required],
   });
+
+  bookappoinmentStateDistrictForm:FormGroup = this.formBuilder.group({
+    state :[Validators.required],
+    district:[Validators.required]
+  });
+
+  async getHospitalDetails(username:string){
+    try{
+      this.hospitalDetails = await this.adminRepository.getHospitalDetails(username);
+      console.log(this.hospitalDetails);
+    }catch(error){
+      console.log(error);
+    }
+  }
 
   async getDoctorSpecialization() {
     try{
@@ -63,6 +93,58 @@ export class PatientBookappoinmentComponent implements OnInit {
       console.log(error);
     }
   }
+
+  async getState() {
+    try {
+      this.state = await this.adminRepository.getState();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getDistrict(stateId: number) {
+    try {
+      this.district = await this.adminRepository.getDistrict(stateId);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  onChangeState() {
+    const selectedState = this.bookappoinmentStateDistrictForm.get('state')?.value;
+    this.bookappoinmentStateDistrictForm.patchValue({
+      district:''
+    });
+    this.getDistrict(selectedState);
+  }
+
+  onChangeDistrict() {
+    const selectedState = this.bookappoinmentStateDistrictForm.get('state')?.value;
+    const selectedDistrict = this.bookappoinmentStateDistrictForm.get('district')?.value;
+
+    if (selectedState && selectedDistrict) {
+        this.filterHospitalDetails = this.hospitalDetails.filter(hospital => 
+            hospital.state == selectedState && hospital.district == selectedDistrict
+        );
+        const hospitalIds = this.filterHospitalDetails.map(hospital => hospital.id);
+        this.filterDoctors = this.doctors.filter(doctor => 
+            hospitalIds.includes(doctor.hospitalId)
+        );
+        // alert(" state = "+selectedState+
+        //       " district = "+ selectedDistrict+
+        //       " Hospital = "+this.hospitalDetails.length+
+        //       " filterHospital = "+this.filterHospitalDetails.length+
+        //       " Doctor = "+this.doctors.length+
+        //       " filterDoctor = "+this.filterDoctors.length
+        //       );
+    } else {
+        this.filterHospitalDetails = [];
+        this.filterDoctors = [];
+    }
+}
+
+
+
   async postBookAppoinment(appoinments: bookappoinment): Promise<void> {
     try {
       const response = await this.patientRepository.postBookAppoinment(appoinments);

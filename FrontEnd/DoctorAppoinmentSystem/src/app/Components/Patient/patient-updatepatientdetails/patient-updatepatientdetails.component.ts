@@ -22,8 +22,6 @@ export class PatientUpdatepatientdetailsComponent implements OnInit {
   isImageSaved: boolean = false;
   cardImageBase64: string = '';
   patients: patient[] = [];
-  LoginUserName = this.commonpropertiesService.getUserName();
-  LoginUserImage = this.commonpropertiesService.getImage();
 
   ngOnInit() {
     this.getpatientById();
@@ -38,12 +36,11 @@ export class PatientUpdatepatientdetailsComponent implements OnInit {
     phoneNumber: ['', [Validators.required, this.commonpropertiesService.PhoneNumberValidator()]],
     address: ['', Validators.required],
     image: [this.cardImageBase64, Validators.required],
-    updatedBy: [this.LoginUserName],
   });
 
   async getpatientById() {
     try {
-      this.patients = await this.patientRepository.getpatientById(this.LoginUserName);
+      this.patients = await this.patientRepository.getpatientById(this.commonpropertiesService.getUserName());
       if (this.patients.length > 0) {
         this.updatepatientForm.patchValue(this.patients[0]);
         this.cardImageBase64 = this.patients[0].image;
@@ -71,6 +68,7 @@ export class PatientUpdatepatientdetailsComponent implements OnInit {
 
   async putPatientDetails(patient: patient): Promise<void> {
     try {
+      patient.updatedBy = await this.commonpropertiesService.getUserName();
       const response = await this.patientRepository.putpatientDetails(patient);
       if (response) {
         alert('Update Successful');

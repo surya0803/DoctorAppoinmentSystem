@@ -4,7 +4,25 @@
     <div class="col-md-6 offset-md-3">
       <h2 class="text-center text-dark mt-5">Book Appointment</h2>
       <div class="card my-5">
-        <form class="card-body cardbody-color p-lg-5" [formGroup]="bookappoinmentForm" (ngSubmit)="onSubmit()">
+        <form class="card-body cardbody-color p-lg-5" [formGroup]="bookappoinmentStateDistrictForm" style="margin-bottom: 0 !important;padding-bottom: 0 !important;">
+          <div class="form-group">
+            <div class="mb-3">
+              <label for="InputState">Select State</label>
+              <select class="form-select mb-3" aria-label="state" formControlName="state" (change)="onChangeState()">
+                <option value="0" disabled selected>Select State</option>
+                <option *ngFor="let item of state" [value]="item.id">{{item.name}}</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="InputDistrict">Select District</label>
+              <select class="form-select mb-3" aria-label="district" formControlName="district" (change)="onChangeDistrict()">
+                <option value="0" disabled selected>Select District</option>
+                <option *ngFor="let item of district" [value]="item.id">{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <form class="card-body cardbody-color p-lg-5" [formGroup]="bookappoinmentForm" (ngSubmit)="onSubmit()" style="margin-top: 0 !important;padding-top: 0 !important;">
           <div class="form-group" *ngIf="false">
             <label for="InputPatientId">Patient Id</label>
             <input type="text" class="form-control" id="InputPatientId" placeholder="Enter Id" name="patientId"
@@ -15,7 +33,7 @@
             <div class="mb-3">
               <select class="form-select mb-3" aria-label="DoctorNameSpecialization" formControlName="doctorId">
                 <option value="" disabled selected>Select Doctor</option>
-                <option *ngFor="let item of doctors" [value]="item.id">{{item.name}} : {{item.specialization}}</option>
+                <option *ngFor="let item of filterDoctors" [value]="item.id">{{item.name}} : {{item.specialization}}</option>
               </select>
             </div>
             <div

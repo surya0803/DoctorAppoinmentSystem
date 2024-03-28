@@ -14,7 +14,7 @@ export class AdminEditdoctorComponent implements OnInit {
   
   LoginUserName = this.commonpropertiesService.getUserName();
   LoginUserImage = this.commonpropertiesService.getImage();
-  username: string = this.commonpropertiesService.getUserName().toString();
+  username: string = this.commonpropertiesService.getUserName();
   isImageSaved: boolean = false;
   cardImageBase64: string = '';
   doctors: doctor[] = [];
@@ -31,6 +31,7 @@ export class AdminEditdoctorComponent implements OnInit {
     if (this.data.doctor) {
       this.initializeForm(this.data.doctor);
     }
+    alert(this.commonpropertiesService.getUserName());
   }
 
   updateDoctorForm: FormGroup = this.formBuilder.group({

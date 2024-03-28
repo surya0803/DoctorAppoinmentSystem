@@ -27,6 +27,7 @@ namespace Patient.Repository
                             {
                                 DoctorModel doctormodel = new DoctorModel();
                                 doctormodel.Id = Convert.ToInt64(reader["Id"]);
+                                doctormodel.HospitalId = Convert.ToInt64(reader["HospitalId"]);
                                 doctormodel.Name = Convert.ToString(reader["Name"]);
                                 doctormodel.Specialization = Convert.ToString(reader["Specialization"]);
                                 list.Add(doctormodel);
