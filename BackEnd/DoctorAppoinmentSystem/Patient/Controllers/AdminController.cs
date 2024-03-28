@@ -64,6 +64,14 @@ namespace Patient.Controllers
             return BadRequest("Unsuccessfull");
         }
 
+        [HttpPut("UpdateHospitalDetails")]
+        public IActionResult PutHospital(HospitalModel hospitalModel)
+        {
+            int test = _IAdminRespository.PutHospital(hospitalModel);
+            if (test != 0) return Ok(test);
+            return BadRequest("Unsuccessfull");
+        }
+
 
         [HttpPost("AddNewDoctor")]
         public IActionResult PostDoctor(DoctorModel doctorModel)

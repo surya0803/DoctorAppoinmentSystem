@@ -516,7 +516,7 @@ namespace Patient.Repository
                                 hospital.Name = Convert.ToString(reader["Name"]);
                                 hospital.State = Convert.ToInt64(reader["State"]);
                                 hospital.District = Convert.ToInt64(reader["District"]);
-                                hospital.Location= Convert.ToString(reader["Location"]);
+                                hospital.Location = Convert.ToString(reader["Location"]);
                                 hospital.Pincode = Convert.ToString(reader["Pincode"]);
                                 hospital.Address = Convert.ToString(reader["Address"]);
                                 hospital.PhoneNumber = Convert.ToString(reader["PhoneNumber"]);
@@ -542,5 +542,43 @@ namespace Patient.Repository
             }
             return list;
         }
+
+    public int PutHospital(HospitalModel hospital)
+    {
+        int result = 0;
+        using (SqlConnection conn = new SqlConnection(connection))
+        {
+            try
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SPU_Hospital", conn))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Name", hospital.Name);
+                    cmd.Parameters.AddWithValue("@State", hospital.State);
+                    cmd.Parameters.AddWithValue("@District", hospital.District);
+                    cmd.Parameters.AddWithValue("@Location", hospital.Location);
+                    cmd.Parameters.AddWithValue("@Pincode", hospital.Pincode);
+                    cmd.Parameters.AddWithValue("@Address", hospital.Address);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", hospital.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@Email", hospital.Email);
+                    cmd.Parameters.AddWithValue("@Website", hospital.Website);
+                    cmd.Parameters.AddWithValue("@AdministratorName", hospital.AdministratorName);
+                    cmd.Parameters.AddWithValue("@AdministratorUserName", hospital.AdministratorUserName);
+                    cmd.Parameters.AddWithValue("@AdministratorPassword", hospital.AdministratorPassword);
+                    result = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        return result;
     }
-   }
+}
+ }

@@ -35,6 +35,7 @@ import { CommonpropertiesService } from './Service/commonproperties.service';
 import { AdminAddHospitalComponent } from './Components/Admin/admin-add-hospital/admin-add-hospital.component';
 import { LocalStorageService } from './Service/local-storage.service';
 import { AdminHospitalLIstComponent } from './Components/Admin/admin-hospital-list/admin-hospital-list.component';
+import { AdminEditHospitalComponent } from './Components/Admin/admin-edit-hospital/admin-edit-hospital.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +64,8 @@ import { AdminHospitalLIstComponent } from './Components/Admin/admin-hospital-li
     DoctorNavbarComponent,
     PatientNavbarComponent,
     AdminAddHospitalComponent,
-    AdminHospitalLIstComponent
+    AdminHospitalLIstComponent,
+    AdminEditHospitalComponent
   ],
   imports: [
     BrowserModule,
