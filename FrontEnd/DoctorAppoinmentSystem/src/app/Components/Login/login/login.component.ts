@@ -14,41 +14,16 @@ export class LoginComponent implements OnInit {
     private loginrepository: LoginRepository, 
     private doctorRepository: DoctorRepository,
     private router: Router, 
-    private commonproperties: CommonpropertiesService) { }
+    private commonproperties: CommonpropertiesService
+    ) 
+  {}
   username: string = '';
   password: string = '';
   user: string = '';
   doctor!:doctor;
   ngOnInit(): void {
   }
-
-  // async onSubmit() {
-  //   try {
-  //     const response = await this.loginrepository.login(this.username, this.password, this.user);
-  //     const arrayresponse=response[0];
-  //     this.commonproperties.setDetails(arrayresponse.userName,arrayresponse.id,arrayresponse.image);
-  //     if (this.username == arrayresponse.userName) {
-  //       switch (this.user) {
-  //         case 'Admin':
-  //           this.router.navigate(['admin-dashboard']);
-  //           break;
-  //         case 'Doctor':
-  //           this.doctor=await this.doctorRepository.getDoctorByUserName(this.username);
-  //           this.commonproperties.setHospitalId(this.doctor.hospitalId);
-  //           this.router.navigate(['doctor-dashboard']);
-  //           break;
-  //         case 'Patient':
-  //           this.router.navigate(['patient-book-appoinment']);
-  //           break;
-  //         default:
-  //           console.log("Invalid User");
-  //           break;
-  //       }
-  //     }
-  //   } catch (error) {
-  //     console.error('Error during login:', error);
-  //   }
-  // }
+  
   async onSubmit() {
     try {
       const response = await this.loginrepository.login(this.username, this.password);
@@ -78,5 +53,5 @@ export class LoginComponent implements OnInit {
     } catch (error) {
       console.error('Error during login:', error);
     }
-  }
+}
 }

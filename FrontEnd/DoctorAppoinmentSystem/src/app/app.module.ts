@@ -33,6 +33,8 @@ import { DoctorNavbarComponent } from './Components/Doctor/doctor-navbar/doctor-
 import { PatientNavbarComponent } from './Components/Patient/patient-navbar/patient-navbar.component';
 import { CommonpropertiesService } from './Service/commonproperties.service';
 import { AdminAddHospitalComponent } from './Components/Admin/admin-add-hospital/admin-add-hospital.component';
+import { LocalStorageService } from './Service/local-storage.service';
+import { AdminHospitalLIstComponent } from './Components/Admin/admin-hospital-list/admin-hospital-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +62,8 @@ import { AdminAddHospitalComponent } from './Components/Admin/admin-add-hospital
     AdminNavbarComponent,
     DoctorNavbarComponent,
     PatientNavbarComponent,
-    AdminAddHospitalComponent
+    AdminAddHospitalComponent,
+    AdminHospitalLIstComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,10 @@ import { AdminAddHospitalComponent } from './Components/Admin/admin-add-hospital
     BrowserAnimationsModule,
     MatDialogModule
   ],
-  providers: [CommonpropertiesService],
+  providers: [
+    CommonpropertiesService,
+    LocalStorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

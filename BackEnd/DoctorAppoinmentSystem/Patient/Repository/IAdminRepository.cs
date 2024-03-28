@@ -6,10 +6,10 @@ namespace Patient.Repository
     {
 
         List<AdminModel> GetLogin(string UserName, string Password);
-        List<AdminModel> GetAdminLogin(string UserName,string Password);
+        List<AdminModel> GetAdminLogin(string UserName, string Password);
 
         int PostNewDoctor(DoctorModel doctorModel);
-        
+
         int PostNewHospital(HospitalModel hospitalModel);
 
         List<StateModel> GetState();
@@ -24,5 +24,7 @@ namespace Patient.Repository
         List<SelectAppoinmentModel> GetAppoinmentDetails();
 
         List<AdminModel> GetUserName(String UsernName);
+
+        List<HospitalModel> GetHospitalDetails(string username);
     }
 }

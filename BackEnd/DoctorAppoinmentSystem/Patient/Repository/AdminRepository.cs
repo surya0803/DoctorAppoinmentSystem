@@ -30,7 +30,6 @@ namespace Patient.Repository
                             while (reader.Read())
                             {
                                 AdminModel adminModel = new AdminModel();
-
                                 adminModel.Id = Convert.ToInt64(reader["Id"]);
                                 adminModel.UserName = Convert.ToString(reader["UserName"]);
                                 adminModel.Password = Convert.ToString(reader["UserType"]);
@@ -70,7 +69,7 @@ namespace Patient.Repository
                             while (reader.Read())
                             {
                                 AdminModel adminModel = new AdminModel();
-                                
+
                                 adminModel.Id = Convert.ToInt64(reader["Id"]);
                                 adminModel.UserName = Convert.ToString(reader["UserName"]);
                                 list.Add(adminModel);
@@ -159,12 +158,14 @@ namespace Patient.Repository
                             reader.Close();
                         }
                     }
-                }catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
                 }
-                finally { 
-                    conn.Close(); 
+                finally
+                {
+                    conn.Close();
                 }
             }
             return list;
@@ -204,7 +205,8 @@ namespace Patient.Repository
                         reader.Close();
                     }
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     Console.WriteLine(ex.ToString());
                 }
                 finally
@@ -276,7 +278,7 @@ namespace Patient.Repository
                     using (SqlCommand cmd = new SqlCommand("SPS_PatientDetailsByUserName", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@UserName",UserName);
+                        cmd.Parameters.AddWithValue("@UserName", UserName);
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
@@ -333,9 +335,10 @@ namespace Patient.Repository
                         cmd.Parameters.AddWithValue("@Image", doctor.Image);
                         cmd.Parameters.AddWithValue("@CreatedBy", doctor.CreatedBy);
                         cmd.Parameters.AddWithValue("@UpdatedBy", doctor.UpdatedBy);
-                        result=cmd.ExecuteNonQuery();
+                        result = cmd.ExecuteNonQuery();
                     }
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
                 }
@@ -367,9 +370,10 @@ namespace Patient.Repository
                         cmd.Parameters.AddWithValue("@Address", patientmodel.Address);
                         cmd.Parameters.AddWithValue("@Image", patientmodel.Image);
                         cmd.Parameters.AddWithValue("@UpdatedBy", patientmodel.UpdatedBy);
-                        result=cmd.ExecuteNonQuery();
+                        result = cmd.ExecuteNonQuery();
                     }
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
                 }
@@ -434,7 +438,7 @@ namespace Patient.Repository
                             while (reader.Read())
                             {
                                 StateModel state = new StateModel();
-                                state.Id = Convert.ToInt32(reader["Id"]);
+                                state.Id = Convert.ToInt64(reader["Id"]);
                                 state.Name = Convert.ToString(reader["Name"]);
                                 list.Add(state);
                             }
@@ -470,8 +474,8 @@ namespace Patient.Repository
                             while (reader.Read())
                             {
                                 DistrictModel district = new DistrictModel();
-                                district.Id = Convert.ToInt32(reader["Id"]);
-                                district.StateId = Convert.ToInt32(reader["StateId"]);
+                                district.Id = Convert.ToInt64(reader["Id"]);
+                                district.StateId = Convert.ToInt64(reader["StateId"]);
                                 district.Name = Convert.ToString(reader["Name"]);
                                 list.Add(district);
                             }
@@ -490,5 +494,53 @@ namespace Patient.Repository
             }
             return list;
         }
+
+        public List<HospitalModel> GetHospitalDetails(string username)
+        {
+            List<HospitalModel> list = new List<HospitalModel>();
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("SPS_HospitalDetails", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@UserName", username != null ? (object)username : DBNull.Value);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                HospitalModel hospital = new HospitalModel();
+                                hospital.Id = Convert.ToInt64(reader["Id"]);
+                                hospital.Name = Convert.ToString(reader["Name"]);
+                                hospital.State = Convert.ToInt64(reader["State"]);
+                                hospital.District = Convert.ToInt64(reader["District"]);
+                                hospital.Location= Convert.ToString(reader["Location"]);
+                                hospital.Pincode = Convert.ToString(reader["Pincode"]);
+                                hospital.Address = Convert.ToString(reader["Address"]);
+                                hospital.PhoneNumber = Convert.ToString(reader["PhoneNumber"]);
+                                hospital.Email = Convert.ToString(reader["Email"]);
+                                hospital.Website = Convert.ToString(reader["Website"]);
+                                hospital.AdministratorName = Convert.ToString(reader["AdministratorName"]);
+                                hospital.AdministratorUserName = Convert.ToString(reader["AdministratorUserName"]);
+                                hospital.AdministratorPassword = Convert.ToString(reader["AdministratorPassword"]);
+                                list.Add(hospital);
+                            }
+                            reader.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            return list;
+        }
     }
-}
+   }

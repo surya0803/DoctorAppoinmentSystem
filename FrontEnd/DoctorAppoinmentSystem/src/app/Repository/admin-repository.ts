@@ -38,4 +38,7 @@ export class AdminRepository{
     async getDistrict(stateId:number):Promise<district[]>{
         return await this.apiInvoker.get<district[]>(`Admin/GetDistrict?StateId=${stateId}`);
     }
+    async getHospitalDetails(username:string):Promise<hospital[]>{
+        return await this.apiInvoker.get<hospital[]>(`Admin/GetHospitalDetails?Username=${username}`);
+    }
 }

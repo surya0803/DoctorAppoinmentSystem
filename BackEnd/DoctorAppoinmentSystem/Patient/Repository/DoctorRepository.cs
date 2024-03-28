@@ -358,7 +358,7 @@ namespace Patient.Repository
                         while (reader.Read())
                         {
                             DoctorModel doctormodel = new DoctorModel();
-                            doctormodel.HospitalId = Convert.ToInt32(reader["HospitalId"]);
+                            doctormodel.HospitalId = Convert.ToInt64(reader["HospitalId"]);
                             doctormodel.UserName = Convert.ToString(reader["UserName"]);
                             doctormodel.Password = Convert.ToString(reader["Password"]);
                             doctormodel.Name = Convert.ToString(reader["Name"]);

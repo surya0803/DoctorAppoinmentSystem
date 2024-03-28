@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { FormBuilder,FormGroup} from '@angular/forms';
 import { doctor, Gender } from 'src/app/Model/doctor';
+import { AdminEditdoctorComponent } from '../admin-editdoctor/admin-editdoctor.component';
 import { AdminRepository } from 'src/app/Repository/admin-repository';
 import { CommonpropertiesService } from 'src/app/Service/commonproperties.service';
-import { MatDialog } from '@angular/material/dialog';
-import { AdminEditdoctorComponent } from '../admin-editdoctor/admin-editdoctor.component';
-import { FormBuilder,FormGroup,Validators} from '@angular/forms';
+
 @Component({
   selector: 'app-doctorlist',
   templateUrl: './doctorlist.component.html',
   styleUrls: ['./doctorlist.component.css']
 })
-export class DoctorlistComponent implements OnInit {
 
+export class DoctorlistComponent implements OnInit {
   constructor(
+    private matDialog: MatDialog,
+    private formBuilder:FormBuilder,
     private adminRepository: AdminRepository,
     private commonpropertiesService: CommonpropertiesService,
-    private matDialog: MatDialog,
-    private formBuilder:FormBuilder
   ) {}
 
   doctors!: doctor[];

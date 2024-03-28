@@ -59,8 +59,8 @@ namespace Patient.Controllers
         [HttpPut("UpdatePatientDetails")]
         public IActionResult PutPatient(PatientModel patientModel)
         {
-            int test=_IAdminRespository.PutPatientsDetails(patientModel);
-            if (test!=0) return Ok(test);
+            int test = _IAdminRespository.PutPatientsDetails(patientModel);
+            if (test != 0) return Ok(test);
             return BadRequest("Unsuccessfull");
         }
 
@@ -68,8 +68,8 @@ namespace Patient.Controllers
         [HttpPost("AddNewDoctor")]
         public IActionResult PostDoctor(DoctorModel doctorModel)
         {
-            int result=_IAdminRespository.PostNewDoctor(doctorModel);
-            if (result!=0) return Ok(result);
+            int result = _IAdminRespository.PostNewDoctor(doctorModel);
+            if (result != 0) return Ok(result);
             return BadRequest("Unsuccessfull");
         }
 
@@ -82,8 +82,9 @@ namespace Patient.Controllers
         }
 
         [HttpGet("GetPatientByUserName")]
-        public IActionResult GetPatientByUserName(String UserName) { 
-            var result=_IAdminRespository.GetPatientDetailsByUserName(UserName);
+        public IActionResult GetPatientByUserName(String UserName)
+        {
+            var result = _IAdminRespository.GetPatientDetailsByUserName(UserName);
             if (result.Any()) return Ok(result);
             return BadRequest("Unsuccessfull");
         }
@@ -91,7 +92,7 @@ namespace Patient.Controllers
         [HttpGet("GetUserName")]
         public IActionResult GetUserName(String UserName)
         {
-            var result=_IAdminRespository.GetUserName(UserName);
+            var result = _IAdminRespository.GetUserName(UserName);
             if (result.Any()) return Ok(result);
             return BadRequest("UnSuccessfull");
         }
@@ -109,6 +110,14 @@ namespace Patient.Controllers
             var result = _IAdminRespository.GetDistrict(StateId);
             if (result.Any()) return Ok(result);
             return BadRequest("UnSuccessfull");
+        }
+
+        [HttpGet("GetHospitalDetails")]
+        public IActionResult GetHospitalDetails(string Username)
+        {
+            var test = _IAdminRespository.GetHospitalDetails(Username);
+            if (test.Any()) return Ok(test);
+            return BadRequest("Unsuccessfull");
         }
     }
 }
