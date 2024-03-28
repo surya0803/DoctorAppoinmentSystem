@@ -25,7 +25,10 @@ export class AdminEditHospitalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: { hospital: hospital }) {
   }
   ngOnInit(): void {
-    if (this.data.hospital) this.initializeForm(this.data.hospital);
+    if (this.data.hospital){
+      this.initializeForm(this.data.hospital);
+      console.log(this.data.hospital);
+    } 
   }
 
   updateHospitalForm: FormGroup = this.formBuilder.group({
@@ -44,10 +47,10 @@ export class AdminEditHospitalComponent implements OnInit {
   });
 
   private initializeForm(hospital: hospital): void {
+    this.getState();
     this.updateHospitalForm.patchValue({
       name: hospital.name,
       state: hospital.state,
-      district: hospital.district,
       location: hospital.location,
       pincode: hospital.pincode,
       address: hospital.address,
@@ -57,7 +60,11 @@ export class AdminEditHospitalComponent implements OnInit {
       administratorName: hospital.administratorName,
       administratorUserName: hospital.administratorUserName,
       administratorPassword: hospital.administratorPassword
-    })
+    });
+    this.onChangeState();
+    this.updateHospitalForm.patchValue({
+      district:hospital.district,
+    });
   }
 
   async putHospital(hospital: hospital): Promise<void> {

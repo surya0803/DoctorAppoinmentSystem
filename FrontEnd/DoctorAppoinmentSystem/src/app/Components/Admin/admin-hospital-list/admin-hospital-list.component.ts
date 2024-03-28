@@ -24,6 +24,7 @@ export class AdminHospitalLIstComponent implements OnInit{
   async getHospitalDetails(username:string){
     try{
       this.hospitalDetails = await this.adminRepository.getHospitalDetails(username);
+      console.log(this.hospitalDetails);
     }catch(error){
       console.log(error);
     }
@@ -32,6 +33,7 @@ export class AdminHospitalLIstComponent implements OnInit{
   openEditHospitalDialog(hospital:hospital):void{
     const dialogRef = this.matDialog.open(AdminEditHospitalComponent, {
       maxHeight: '80vh',
+      minWidth: '100vh',
       data: { hospital:hospital },
       disableClose: true
     });
