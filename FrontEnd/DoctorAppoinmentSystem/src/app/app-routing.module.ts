@@ -23,6 +23,8 @@ import { AdminNavbarComponent } from './Components/Admin/admin-navbar/admin-navb
 import { PatientNavbarComponent } from './Components/Patient/patient-navbar/patient-navbar.component';
 import { DoctorNavbarComponent } from './Components/Doctor/doctor-navbar/doctor-navbar.component';
 import { AdminAddHospitalComponent } from './Components/Admin/admin-add-hospital/admin-add-hospital.component';
+import { AdminEditHospitalComponent } from './Components/Admin/admin-edit-hospital/admin-edit-hospital.component';
+import { AdminHospitalLIstComponent } from './Components/Admin/admin-hospital-list/admin-hospital-list.component';
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login',component:LoginComponent},
@@ -47,7 +49,9 @@ const routes: Routes = [
   { path: 'admin-navbar',component:AdminNavbarComponent},
   { path: 'doctor-navbar',component:DoctorNavbarComponent},
   { path: 'patient-navbar',component:PatientNavbarComponent},
-  { path: 'admin-add-hospital',component:AdminAddHospitalComponent}
+  { path: 'admin-add-hospital',component:AdminAddHospitalComponent},
+  { path: 'admin-hospital-list',component:AdminHospitalLIstComponent},
+  { path: 'admin-edit-hospital',component:AdminEditHospitalComponent}
 ];
 
 @NgModule({

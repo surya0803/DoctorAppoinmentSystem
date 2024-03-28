@@ -41,4 +41,7 @@ export class AdminRepository{
     async getHospitalDetails(username:string):Promise<hospital[]>{
         return await this.apiInvoker.get<hospital[]>(`Admin/GetHospitalDetails?Username=${username}`);
     }
+    async putHospital(hospital:hospital):Promise<hospital>{
+        return await this.apiInvoker.put('Admin/UpdatePatientDetails',hospital);
+    }
 }
