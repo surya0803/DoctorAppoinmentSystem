@@ -19,4 +19,7 @@
     text-decoration: none;
   }
 
-  
+  #add-hospital-title{
+    font-family: Roboto-Bold!important;
+    color: white;
+  }
