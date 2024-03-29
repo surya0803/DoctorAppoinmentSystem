@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <h2 class="text-center text-dark mt-5">Update Details</h2>
+      <h2 class="text-center" id="update-patient-title">Update Details</h2>
       <div class="card my-5">
         <form class="card-body cardbody-color p-lg-5" [formGroup]="updatepatientForm" (ngSubmit)="onSubmit()">
           <div class="mb-3">
@@ -74,7 +74,6 @@
           <div class="mb-3">
             <label for="InputImage">Image</label>
             <fieldset class="mb-3">
-              <label>Upload Image</label>
               <div class="custom-file fileInputProfileWrap">
                 <div class="row col-md-12">
                   <input type="file" (change)="CreateBase64String($event)" class="fileInputProfile form-control">

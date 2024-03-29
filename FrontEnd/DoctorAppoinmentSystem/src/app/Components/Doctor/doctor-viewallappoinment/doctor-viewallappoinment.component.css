@@ -13,3 +13,9 @@
 #contain-appointment-table-2{
     padding-top: 10px;
 }
+
+#appoinment-null-error-message{
+    color: white; 
+    font-family: Roboto-BoldItalic!important;
+    font-size: 20px;
+}

@@ -1,7 +1,7 @@
 <app-patient-navbar></app-patient-navbar>
 <div class="container-fluid" id="container" >
   <div class="container-fluid text-center" id="container-appointmentList-message" *ngIf="appoinments.length == 0">
-    <p class="mt-5 display-7">You haven't booked any appointments</p>
+    <p class="mt-5 display-7" id="appoinment-null-error-message">You haven't booked any appointments</p>
   </div> 
   <div class="container-fluid bg-light" id="container-appointmentList-1" *ngIf="appoinments.length != 0">
     <div class="container-fluid table-responsive" id="container-appointmentList-2">

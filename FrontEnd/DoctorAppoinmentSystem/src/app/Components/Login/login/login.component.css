@@ -1,3 +1,20 @@
+/* #image-container{
+  background-image: url('/assets/images/doctor-6497496.jpg');
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+} */
+
+#project-titile{
+  color: white;
+  font-family: Roboto-Bold;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
 .btn-color{
     background-color: #0e1c36;
     color: #fff;
@@ -17,3 +34,4 @@
   a{
     text-decoration: none;
   }
+  

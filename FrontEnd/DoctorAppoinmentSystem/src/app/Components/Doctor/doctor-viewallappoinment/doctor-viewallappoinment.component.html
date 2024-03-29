@@ -2,7 +2,7 @@
 
 <div class="container-fluid" id="container" >
   <div class="container-fluid text-center" id="container-appointment-table-message"  *ngIf="appoinments.length == 0">
-    <p class="mt-5 display-7">No appointments have been scheduled for <br>you  today and upcoming days.</p>
+    <p class="mt-5 display-7" id="appoinment-null-error-message">No appointments have been scheduled for <br>you  today and upcoming days.</p>
   </div> 
   <div class="container-fluid bg-light" id="container-appointment-table-1"  *ngIf="appoinments.length != 0">
     <div class="container-fluid table-responsive" id="container-appointment-table-2">

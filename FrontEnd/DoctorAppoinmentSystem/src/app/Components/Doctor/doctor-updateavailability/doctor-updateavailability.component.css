@@ -11,3 +11,8 @@
   a{
     text-decoration: none;
   }
+
+  #update-availability-title{
+    color: white;
+    font-family: Roboto-Bold!important;
+  }

@@ -1,7 +1,11 @@
+#update-patient-title{
+  font-family: Roboto-Bold!important;
+  color: white;
+}
+
 .btn-color{
     background-color: #0e1c36;
     color: #fff;
-    
   }
   
   .cardbody-color{

@@ -41,7 +41,7 @@ export class DoctorlistComponent implements OnInit {
   }
   openEditDoctorDialog(doctor: doctor):void {
     const dialogRef = this.matDialog.open(AdminEditdoctorComponent, {
-      maxHeight: '80vh',
+      maxHeight: '${windowHeight}px',
       data: { doctor:doctor },
       disableClose: true
     });

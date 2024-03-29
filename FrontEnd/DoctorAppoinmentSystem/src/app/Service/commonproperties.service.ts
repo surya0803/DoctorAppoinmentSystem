@@ -19,6 +19,7 @@ export class CommonpropertiesService implements OnInit{
 
   ngOnInit(): void {
       this.getDetails();
+      this.getBackgroundImage();
   }
   
   setDetails(username:string,id:number,image:string,password:string){
@@ -59,10 +60,20 @@ export class CommonpropertiesService implements OnInit{
     this.getDetails();
     return this.image;
   }
-  
+  getPassword(){
+    this.getDetails();
+    return this.password;
+  }
   setHospitalId(id:number){
     this.getDetails();
     this.hospitalId=id;
+  }
+  getBackgroundImage() : any{
+    this.getDetails();
+    if(this.password == '1') return 'assets/images/admin.jpg'
+    else if ( this.password == '2') return 'assets/images/patient.jpg'
+    else if ( this.password == '3') return 'assets/images/admin.jpg'
+    return 'assets/images/admin.jpg'
   }
 
   PhoneNumberValidator(): ValidatorFn {

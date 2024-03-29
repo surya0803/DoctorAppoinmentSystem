@@ -2,3 +2,20 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face{
+    font-family: Roboto-Regular;
+    src: url(assets/Fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+@font-face{
+    font-family: Roboto-Bold;
+    src: url(assets/Fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+}
+@font-face{
+    font-family: Roboto-BoldItalic;
+    src: url(assets/Fonts/Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: Roboto-Black;
+    src: url(assets/Fonts/Roboto/Roboto-Black.ttf) format('truetype');
+}

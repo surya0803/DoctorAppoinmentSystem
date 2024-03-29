@@ -56,7 +56,8 @@ export class PatientBookappoinmentComponent implements OnInit {
 
   bookappoinmentStateDistrictForm:FormGroup = this.formBuilder.group({
     state :[Validators.required],
-    district:[Validators.required]
+    district:[Validators.required],
+    hospital:[Validators.required]
   });
 
   async getHospitalDetails(username:string){
@@ -126,24 +127,21 @@ export class PatientBookappoinmentComponent implements OnInit {
         this.filterHospitalDetails = this.hospitalDetails.filter(hospital => 
             hospital.state == selectedState && hospital.district == selectedDistrict
         );
-        const hospitalIds = this.filterHospitalDetails.map(hospital => hospital.id);
-        this.filterDoctors = this.doctors.filter(doctor => 
-            hospitalIds.includes(doctor.hospitalId)
-        );
-        // alert(" state = "+selectedState+
-        //       " district = "+ selectedDistrict+
-        //       " Hospital = "+this.hospitalDetails.length+
-        //       " filterHospital = "+this.filterHospitalDetails.length+
-        //       " Doctor = "+this.doctors.length+
-        //       " filterDoctor = "+this.filterDoctors.length
-        //       );
     } else {
         this.filterHospitalDetails = [];
-        this.filterDoctors = [];
     }
 }
 
-
+onChangeHospital(){
+  const hospitalId = this.bookappoinmentStateDistrictForm.get('hospital')?.value;
+  if(hospitalId){
+    this.filterDoctors = this.doctors.filter(doctor => 
+      hospitalId.includes(doctor.hospitalId)
+      );
+  }else{
+    this.filterDoctors = [];
+  }
+}
 
   async postBookAppoinment(appoinments: bookappoinment): Promise<void> {
     try {

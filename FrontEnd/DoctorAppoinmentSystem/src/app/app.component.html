@@ -1,1 +1,5 @@
-<router-outlet></router-outlet>
+
+<div id="background-image" [ngStyle]="{'background-image': 'url(' + getBackgroundImage() + ')'}"></div>
+<div id="content-container">
+    <router-outlet></router-outlet>
+</div>

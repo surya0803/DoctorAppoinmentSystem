@@ -1,14 +1,23 @@
 .custom-card-style {
-    border: none;
-  }
+  border: none;
+}
 
-  #container{
-    margin-top: 10px;
-  }
-  #dashboard-header{
-    font-size: x-large; 
-    font: weight 450;
-  }
-  .dashboard-cards{
-    max-width: 18rem;
-  }
+#container {
+  margin-top: 10px;
+}
+
+#dashboard-header {
+  font-size: x-large;
+  font: weight 450;
+}
+
+.dashboard-cards {
+  max-width: 18rem;
+}
+
+#dashboard-title {
+  font-family: Roboto-Bold !important;
+  color: White !important;
+  letter-spacing: 1.5px;
+  font-size: 15px !important;
+}
