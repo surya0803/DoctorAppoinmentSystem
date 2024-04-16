@@ -1,49 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\model\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\model\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\model\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\model\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\repository\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|d:\\github\\das\\dass\\backend\\doctorappoinmentsystem\\patient\\patient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\patient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\patient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -54,54 +50,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\appsettings.json",
-              "RelativeDocumentMoniker": "Patient\\appsettings.json",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\appsettings.json",
-              "RelativeToolTip": "Patient\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-01T14:17:17.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Program.cs",
-              "RelativeDocumentMoniker": "Patient\\Program.cs",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Program.cs",
-              "RelativeToolTip": "Patient\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T14:17:04.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Patient\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Patient\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-01T14:16:59.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Patient\\appsettings.Development.json",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\appsettings.Development.json",
               "RelativeToolTip": "Patient\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -110,11 +67,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "AdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\AdminRepository.cs",
+              "RelativeDocumentMoniker": "Patient\\Repository\\AdminRepository.cs",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\AdminRepository.cs",
+              "RelativeToolTip": "Patient\\Repository\\AdminRepository.cs",
+              "ViewState": "AQIAAD4BAAAAAAAAAAArwFEBAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T14:10:26.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Patient\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Patient\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-01T14:16:59.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AdminModel.cs",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Model\\AdminModel.cs",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Model\\AdminModel.cs",
               "RelativeDocumentMoniker": "Patient\\Model\\AdminModel.cs",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Model\\AdminModel.cs",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Model\\AdminModel.cs",
               "RelativeToolTip": "Patient\\Model\\AdminModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -123,23 +105,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "PatientRepository.cs",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\PatientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\PatientRepository.cs",
               "RelativeDocumentMoniker": "Patient\\Repository\\PatientRepository.cs",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\PatientRepository.cs",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\PatientRepository.cs",
               "RelativeToolTip": "Patient\\Repository\\PatientRepository.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAzwB0AAABbAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAArwCEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T15:37:42.986Z"
+              "WhenOpened": "2024-03-28T15:37:42.986Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "DoctorRepository.cs",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\DoctorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\DoctorRepository.cs",
               "RelativeDocumentMoniker": "Patient\\Repository\\DoctorRepository.cs",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\DoctorRepository.cs",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\DoctorRepository.cs",
               "RelativeToolTip": "Patient\\Repository\\DoctorRepository.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAAAhwGEAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,11 +130,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Program.cs",
+              "RelativeDocumentMoniker": "Patient\\Program.cs",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Program.cs",
+              "RelativeToolTip": "Patient\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T14:17:04.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Patient.csproj",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
               "RelativeDocumentMoniker": "Patient\\Patient.csproj",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
               "RelativeToolTip": "Patient\\Patient.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -159,24 +154,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminRepository.cs",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\AdminRepository.cs",
-              "RelativeDocumentMoniker": "Patient\\Repository\\AdminRepository.cs",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\AdminRepository.cs",
-              "RelativeToolTip": "Patient\\Repository\\AdminRepository.cs",
-              "ViewState": "AQIAAM4AAAAAAAAAAAAswCQAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T14:10:26.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "IAdminRepository.cs",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\IAdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\IAdminRepository.cs",
               "RelativeDocumentMoniker": "Patient\\Repository\\IAdminRepository.cs",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\IAdminRepository.cs",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\IAdminRepository.cs",
               "RelativeToolTip": "Patient\\Repository\\IAdminRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -186,14 +168,13 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Controllers\\AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Patient\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Patient\\Controllers\\AdminController.cs",
               "ViewState": "AQIAAC8AAAAAAAAAAAAkwEIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T16:29:45.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T16:29:45.712Z"
             }
           ]
         }

@@ -68,13 +68,13 @@ import { AdminEditHospitalComponent } from './Components/Admin/admin-edit-hospit
     AdminEditHospitalComponent
   ],
   imports: [
+    MatDialogModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
   ],
   providers: [
     CommonpropertiesService,

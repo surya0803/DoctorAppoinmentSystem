@@ -34,11 +34,13 @@ export class CommonpropertiesService implements OnInit{
   }
   
   getDetails(){
+    if(this.localStorageService.getDataFromLocalStorage('loginUserDetails')){
     const loginUserDetails: loginUserDetails = JSON.parse(this.localStorageService.getDataFromLocalStorage('loginUserDetails'));
     this.id=loginUserDetails.id;
     this.username=loginUserDetails.username;
     this.password=loginUserDetails.userType;
     this.image=loginUserDetails.image;
+    }
   }
 
   clearLoginUserDetails(){
@@ -68,13 +70,13 @@ export class CommonpropertiesService implements OnInit{
     this.getDetails();
     this.hospitalId=id;
   }
-  getBackgroundImage() : any{
-    this.getDetails();
-    if(this.password == '1') return 'assets/images/admin.jpg'
-    else if ( this.password == '2') return 'assets/images/patient.jpg'
-    else if ( this.password == '3') return 'assets/images/admin.jpg'
-    return 'assets/images/admin.jpg'
-  }
+    getBackgroundImage() : any{
+      this.getDetails();
+      if(this.password == '1') return 'assets/images/admin.jpg'
+      else if ( this.password == '2') return 'assets/images/patient.jpg'
+      else if ( this.password == '3') return 'assets/images/admin.jpg'
+      return 'assets/images/admin.jpg'
+    }
 
   PhoneNumberValidator(): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } | null => {

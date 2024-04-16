@@ -40,7 +40,7 @@
             <div class="mb-3">
               <label for="InputPincode">Pincode</label>
               <input type="text" class="form-control" id="InputPincode" placeholder="Enter Pincode" name="pincode"
-                formControlName="Pincode">
+                formControlName="pincode">
               <div *ngIf="updateHospitalForm.get('pincode')?.hasError('required') && updateHospitalForm.get('pincode')?.touched">
                 <small class="text-danger">Username is required.</small>
               </div>      

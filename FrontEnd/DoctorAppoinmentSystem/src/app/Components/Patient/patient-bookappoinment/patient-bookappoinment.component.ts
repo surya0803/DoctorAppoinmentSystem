@@ -136,7 +136,7 @@ onChangeHospital(){
   const hospitalId = this.bookappoinmentStateDistrictForm.get('hospital')?.value;
   if(hospitalId){
     this.filterDoctors = this.doctors.filter(doctor => 
-      hospitalId.includes(doctor.hospitalId)
+      hospitalId.includes(hospitalId)
       );
   }else{
     this.filterDoctors = [];
@@ -149,7 +149,7 @@ onChangeHospital(){
       if(response){
         alert('Appoinment booked successfull');
         console.log('Successful', response);
-        this.router.navigate(['patient-book-appoinment']);
+        this.router.navigate(['patient-view-appoinmentstatus']);
       }
     } catch (error) {
       console.log('Unsuccessful', error);

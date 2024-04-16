@@ -896,19 +896,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\91733\\.nuget\\packages\\": {}
+    "C:\\Users\\VijayPC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
+      "projectUniqueName": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
       "projectName": "Patient",
-      "projectPath": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
-      "packagesPath": "C:\\Users\\91733\\.nuget\\packages\\",
-      "outputPath": "D:\\GITHUB\\DAS\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\obj\\",
+      "projectPath": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Patient.csproj",
+      "packagesPath": "C:\\Users\\VijayPC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\91733\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VijayPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -967,7 +967,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   },

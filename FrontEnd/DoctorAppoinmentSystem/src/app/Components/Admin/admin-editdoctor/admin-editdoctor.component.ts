@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DoctorRepository } from 'src/app/Repository/doctor-repository';
 import { CommonpropertiesService } from 'src/app/Service/commonproperties.service';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { doctor } from 'src/app/Model/doctor';
 
 @Component({
@@ -31,7 +31,6 @@ export class AdminEditdoctorComponent implements OnInit {
     if (this.data.doctor) {
       this.initializeForm(this.data.doctor);
     }
-    alert(this.commonpropertiesService.getUserName());
   }
 
   updateDoctorForm: FormGroup = this.formBuilder.group({

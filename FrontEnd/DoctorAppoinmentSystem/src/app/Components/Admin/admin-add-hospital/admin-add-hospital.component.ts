@@ -43,6 +43,9 @@ export class AdminAddHospitalComponent implements OnInit {
   async postAddHospital(hospital: hospital): Promise<void> {
     try {
       const response = await this.adminRepository.postAddHospital(hospital);
+      if (response) {
+        this.router.navigateByUrl('admin-hospital-list');
+      }
     } catch (error) {
       console.log(error);
     }
@@ -65,17 +68,17 @@ export class AdminAddHospitalComponent implements OnInit {
   }
 
   onSubmit() {
-    
+    if (this.addHospitalForm.valid) {
       const formData = this.addHospitalForm.value as hospital;
       this.postAddHospital(formData);
       console.log(formData);
-
+    }
   }
 
   onChangeState() {
     const selectedState = this.addHospitalForm.get('state')?.value;
     this.addHospitalForm.patchValue({
-      district:''
+      district: ''
     });
     this.getDistrict(selectedState);
   }
