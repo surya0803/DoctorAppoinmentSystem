@@ -1,4 +1,4 @@
-import { Component, OnInit,Inject } from '@angular/core';
+import { Component, OnInit,Inject, Optional } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { patient } from 'src/app/Model/patient';
 import { PatientRepository } from 'src/app/Repository/patient-repository';
@@ -17,7 +17,7 @@ export class AdminEditpatientComponent {
     private formBuilder: FormBuilder, 
     private commonpropertiesService: CommonpropertiesService,
     public matDialogRef: MatDialogRef<AdminEditpatientComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { patient:patient }
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: { patient:patient }
     ) { }
     
   isImageSaved: boolean = false;
@@ -28,6 +28,7 @@ export class AdminEditpatientComponent {
 
   ngOnInit() {
     if(this.data.patient){
+      console.log(this.data.patient);
       this.initializeForm(this.data.patient);
     }
   }

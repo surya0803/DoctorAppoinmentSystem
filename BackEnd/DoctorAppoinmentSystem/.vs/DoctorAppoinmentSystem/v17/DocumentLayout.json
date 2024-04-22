@@ -62,8 +62,7 @@
               "RelativeToolTip": "Patient\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-01T14:16:53.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T14:16:53.787Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "Patient\\Repository\\AdminRepository.cs",
               "ViewState": "AQIAAD4BAAAAAAAAAAArwFEBAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T14:10:26.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T14:10:26.138Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "Patient\\Model\\AdminModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T14:00:11.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T14:00:11.689Z"
             },
             {
               "$type": "Document",
@@ -111,7 +108,7 @@
               "RelativeDocumentMoniker": "Patient\\Repository\\PatientRepository.cs",
               "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\PatientRepository.cs",
               "RelativeToolTip": "Patient\\Repository\\PatientRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAArwCEAAAAdAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAgwE4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T15:37:42.986Z",
               "EditorCaption": ""

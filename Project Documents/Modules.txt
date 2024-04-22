@@ -1,0 +1,17 @@
+Admin
+-> Add, Update, Delete hospital
+-> Update, Delete Patient 
+-> View ALL Hospitals,Doctors,Patients,Appointments
+Hospital
+-> Add, Update, Delete doctor
+-> Update hospital details
+-> View all their hospital appointments
+Doctor
+-> Update doctor details
+-> Add timeslots 
+-> View all today, upcoming and history of appointments
+-> Approve or deny booked appointments
+Patient
+-> Update patient details
+-> Book appoinment
+-> View booked Appointment status
