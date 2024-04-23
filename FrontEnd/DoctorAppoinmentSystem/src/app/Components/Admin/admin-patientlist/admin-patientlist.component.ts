@@ -39,6 +39,7 @@ ngOnInit():void{
 }
 
 openEditPatientDialog(patient:patient){
+  try{
   const dialogRef=this.matDialog.open(AdminEditpatientComponent,{
     data: { patient:patient},
     height: '400px',
@@ -49,6 +50,10 @@ dialogRef.afterClosed().subscribe(result=>{
   console.log(result);
   this.getAllPatient();
 });
+}
+catch(error){
+  console.log(error);
+}
 }
 }
 

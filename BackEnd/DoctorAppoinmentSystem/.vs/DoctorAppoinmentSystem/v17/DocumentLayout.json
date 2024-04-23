@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|solutionrelative:patient\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{580AD6D4-0B1C-42F0-816A-1BF7A7CD4671}|Patient\\Patient.csproj|c:\\users\\vijaypc\\documents\\github\\dass\\backend\\doctorappoinmentsystem\\patient\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -66,15 +66,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AdminRepository.cs",
               "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\AdminRepository.cs",
               "RelativeDocumentMoniker": "Patient\\Repository\\AdminRepository.cs",
               "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\AdminRepository.cs",
               "RelativeToolTip": "Patient\\Repository\\AdminRepository.cs",
-              "ViewState": "AQIAAD4BAAAAAAAAAAArwFEBAAAYAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAewBUAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T14:10:26.138Z"
+              "WhenOpened": "2024-03-22T14:10:26.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -102,16 +103,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PatientRepository.cs",
               "DocumentMoniker": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\PatientRepository.cs",
               "RelativeDocumentMoniker": "Patient\\Repository\\PatientRepository.cs",
               "ToolTip": "C:\\Users\\VijayPC\\Documents\\GitHub\\DASS\\BackEnd\\DoctorAppoinmentSystem\\Patient\\Repository\\PatientRepository.cs",
               "RelativeToolTip": "Patient\\Repository\\PatientRepository.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAgwE4AAAAAAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAgwFQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T15:37:42.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-28T15:37:42.986Z"
             },
             {
               "$type": "Document",
