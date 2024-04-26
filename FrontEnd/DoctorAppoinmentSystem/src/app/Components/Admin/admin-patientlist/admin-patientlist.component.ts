@@ -42,8 +42,6 @@ openEditPatientDialog(patient:patient){
   try{
   const dialogRef=this.matDialog.open(AdminEditpatientComponent,{
     data: { patient:patient},
-    height: '400px',
-  width: '600px',
   });
 
 dialogRef.afterClosed().subscribe(result=>{

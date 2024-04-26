@@ -32,8 +32,6 @@ export class AdminHospitalLIstComponent implements OnInit{
 
   openEditHospitalDialog(hospital:hospital):void{
     const dialogRef = this.matDialog.open(AdminEditHospitalComponent, {
-      maxHeight: '80vh',
-      minWidth: '100vh',
       data: { hospital:hospital },
       disableClose: true
     });

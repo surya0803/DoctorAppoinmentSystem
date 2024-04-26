@@ -1,17 +1,17 @@
-import { Component, OnInit, Inject, Optional } from '@angular/core';
+import { Component, Inject, Optional } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { hospital } from 'src/app/Model/hospital';
 import { state } from 'src/app/Model/state';
 import { district } from 'src/app/Model/district';
 import { AdminRepository } from 'src/app/Repository/admin-repository';
 import { CommonpropertiesService } from 'src/app/Service/commonproperties.service';
+import { Router } from '@angular/router';
 @Component({
-  selector: 'app-admin-edit-hospital',
-  templateUrl: './admin-edit-hospital.component.html',
-  styleUrls: ['./admin-edit-hospital.component.css']
+  selector: 'app-admin-edit-hospital-details',
+  templateUrl: './admin-edit-hospital-details.component.html',
+  styleUrls: ['./admin-edit-hospital-details.component.css']
 })
-export class AdminEditHospitalComponent{
+export class AdminEditHospitalDetailsComponent {
 
   
   state: state[] = [];
@@ -20,15 +20,9 @@ export class AdminEditHospitalComponent{
   constructor(
     private formBuilder: FormBuilder,
     private adminRespository: AdminRepository,
-    private commonpropertiesService: CommonpropertiesService,
-    public matDialogRef: MatDialogRef<AdminEditHospitalComponent>,
-    @Optional() @Inject(MAT_DIALOG_DATA) public data: { hospital: hospital }) {
+    private commonpropertiesService: CommonpropertiesService) {
   }
   ngOnInit(){
-    if (this.data.hospital){
-      this.initializeForm(this.data.hospital);
-      console.log(this.data.hospital);
-    } 
   }
 
   updateHospitalForm: FormGroup = this.formBuilder.group({

@@ -36,6 +36,7 @@ import { AdminAddHospitalComponent } from './Components/Admin/admin-add-hospital
 import { LocalStorageService } from './Service/local-storage.service';
 import { AdminHospitalLIstComponent } from './Components/Admin/admin-hospital-list/admin-hospital-list.component';
 import { AdminEditHospitalComponent } from './Components/Admin/admin-edit-hospital/admin-edit-hospital.component';
+import { AdminEditHospitalDetailsComponent } from './Components/Admin/admin-edit-hospital-details/admin-edit-hospital-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +66,8 @@ import { AdminEditHospitalComponent } from './Components/Admin/admin-edit-hospit
     PatientNavbarComponent,
     AdminAddHospitalComponent,
     AdminHospitalLIstComponent,
-    AdminEditHospitalComponent
+    AdminEditHospitalComponent,
+    AdminEditHospitalDetailsComponent
   ],
   imports: [
     MatDialogModule,

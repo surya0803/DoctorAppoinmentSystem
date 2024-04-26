@@ -3,14 +3,14 @@
   <div class="row">
     <div class="col-md-6 offset-md-3">
       <h2 class="text-center" id="add-hospital-title">Add Hospital</h2>
-      <div class="card my-5">
+      <div class="card my-5" style="overflow-y: auto !important; max-height: 700px !important;">
         <form [formGroup]="addHospitalForm" (ngSubmit)="onSubmit()" class="card-body cardbody-color p-lg-5">
           <div class="mb-3">
                 <label for="InputHospitalName">Hospital Name</label>
                 <input type="text" class="form-control" id="Hospital" placeholder="Name" name="name"
                   formControlName="name">
                 <div *ngIf="addHospitalForm.get('name')?.hasError('required') && addHospitalForm.get('name')?.touched">
-                  <small class="text-danger">Name is required.</small>
+                  <small class="text-danger">Hospital Name is required.</small>
                 </div>
                 <div *ngIf="addHospitalForm.get('name')?.hasError('invalidName') && addHospitalForm.get('name')?.touched">
                   <small class="text-danger">Invalid name. Only letters and spaces are allowed.</small>
@@ -35,7 +35,7 @@
             <input type="text" class="form-control" id="InputLocation" placeholder="Enter Location" name="location"
               formControlName="location">
             <div *ngIf="addHospitalForm.get('location')?.hasError('required') && addHospitalForm.get('location')?.touched">
-              <small class="text-danger">Username is required.</small>
+              <small class="text-danger">Location is required.</small>
             </div>      
           </div>
           <div class="mb-3">
@@ -43,7 +43,7 @@
             <input type="text" class="form-control" id="InputPincode" placeholder="Enter Pincode" name="pincode"
               formControlName="pincode">
             <div *ngIf="addHospitalForm.get('pincode')?.hasError('required') && addHospitalForm.get('pincode')?.touched">
-              <small class="text-danger">Username is required.</small>
+              <small class="text-danger">Pincode is required.</small>
             </div>      
           </div>
           <div class="mb-3">
@@ -51,7 +51,7 @@
             <input type="text" class="form-control" id="InputEmail" placeholder="Enter Email" name="email"
               formControlName="email">
             <div *ngIf="addHospitalForm.get('email')?.hasError('required') && addHospitalForm.get('email')?.touched">
-              <small class="text-danger">Username is required.</small>
+              <small class="text-danger">Email` is required.</small>
             </div>      
           </div>
           <div class="mb-3">
@@ -59,7 +59,7 @@
             <input type="text" class="form-control" id="InputWebsite" placeholder="Enter Website" name="website"
               formControlName="website">
             <div *ngIf="addHospitalForm.get('website')?.hasError('required') && addHospitalForm.get('website')?.touched">
-              <small class="text-danger">Username is required.</small>
+              <small class="text-danger">Website is required.</small>
             </div>      
           </div>
           <div class="mb-3">
@@ -79,7 +79,7 @@
             <input type="text" class="form-control" id="InputAdministratorName" placeholder="Enter Username" name="administratorName"
               formControlName="administratorName">
             <div *ngIf="addHospitalForm.get('administratorName')?.hasError('required') && addHospitalForm.get('administratorName')?.touched">
-              <small class="text-danger">Username is required.</small>
+              <small class="text-danger">Name is required.</small>
             </div>            
           </div>
           <div class="mb-3">

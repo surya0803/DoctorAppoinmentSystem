@@ -11,7 +11,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./admin-editpatient.component.css']
 })
 
-export class AdminEditpatientComponent {
+export class AdminEditpatientComponent{
   constructor(
     private patientRepository: PatientRepository, 
     private formBuilder: FormBuilder, 

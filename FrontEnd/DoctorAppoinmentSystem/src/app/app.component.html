@@ -1,5 +1,11 @@
-
-<div id="background-image" [ngStyle]="{'background-image': 'url(' + getBackgroundImage() + ')'}"></div>
-<div id="content-container">
+<body [ngStyle]="{'background-image': 'url(' + getBackgroundImage() + ')',
+                  'background-size': 'cover',
+                  'background-position': 'center',
+                  'background-repeat': 'no-repeat',
+                  'height': '100vh',
+                  'margin': '0',
+                  'padding': '0',
+                  'display': 'flex',
+                  'flex-direction': 'column'}">
     <router-outlet></router-outlet>
-</div>
+</body>

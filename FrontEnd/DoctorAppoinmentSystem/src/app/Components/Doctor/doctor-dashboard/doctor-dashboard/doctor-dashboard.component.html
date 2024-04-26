@@ -1,9 +1,9 @@
 <app-doctor-navbar></app-doctor-navbar>
-<div class="container-fluid" id="container">
+<div class="container-fluid">
   <div class="p-3 mb-2" id="dashboard-title">DASHBOARD</div><br>
   <div class="row">
     <div class="col-md-4 mb-3">
-      <div class="card bg-light custom-card-style mx-auto" class="dashboard-cards">
+      <div class="card bg-light custom-card-style mx-auto" style="max-width: 18rem;">
         <div class="card-header custom-card-style">Appointment</div>
         <div class="card-body">
           <h5 class="card-title">Today Appointments : {{this.todayAppoinment.length}}</h5>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <div class="card bg-light custom-card-style mx-auto" class="dashboard-cards">
+      <div class="card bg-light custom-card-style mx-auto" style="max-width: 18rem;">
         <div class="card-header custom-card-style">Appointment</div>
         <div class="card-body">
           <h5 class="card-title">Upcoming Appointment : {{this.upcomingAppoinment.length}}</h5>
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <div class="card bg-light custom-card-style mx-auto" class="dashboard-cards">
+      <div class="card bg-light custom-card-style mx-auto" style="max-width: 18rem;">
         <div class="card-header custom-card-style">Appointment</div>
         <div class="card-body">
           <h5 class="card-title">Total Number of Appoinment : {{this.historyOfAppoinment.length}}</h5>
